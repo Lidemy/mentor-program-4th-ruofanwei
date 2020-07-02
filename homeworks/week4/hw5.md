@@ -29,9 +29,9 @@ URL : https://api.lidemy
 |--------|--------|------------|----------------------|----------------|-----|
 | 取得部分餐廳數量 |GET| _limit:限制回傳資料數量 | /restaurant|選擇回傳餐廳資料的數量，使用參數，將回傳所有餐廳與其資料| /restaurant?limit=20|
 | 獲取單一餐廳資料 | GET|id   |/restaurant/:id | 指定該 ID 餐廳並單回傳該餐廳的資料| /restaurant?id=10 |
-| 新增餐廳 | POST | data | /restaurant/:data| 該物件中需要包含 Restaurant Name 與地址，ID 由後台自動生成| { Name : veganDay, Adress : Taichung }|
+| 新增餐廳 | POST | data | /restaurant/:data| 該物件中需要包含 Restaurant Name 與地址，ID 由後台自動生成| x |
 | 刪除餐廳   | DELETE   | id     | /restaurant/:id | 刪除指定 ID 的餐廳資訊 | /restaurant?id=9|
-| 更改餐廳資訊   | PATCH   | id     | /restaurant/:id | 更新指定 ID 的餐廳資訊  | { Name : GoodDay, Adress : Taichung }|
+| 更改餐廳資訊   | PATCH   | id     | /restaurant/:id | 更新指定 ID 的餐廳資訊  |  x |
 
 
 Example Request
