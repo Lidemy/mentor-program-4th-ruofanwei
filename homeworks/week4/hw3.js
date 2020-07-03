@@ -8,11 +8,6 @@ const apiUrl = 'https://restcountries.eu/rest/v2';
 
 const name = args[2];
 
-// node hw3.js korea
-// args[2] 需要是國家名稱
-if (!name) {
-  console.log('請輸入國家名稱');
-}
 
 // ES6 新語法 Template Literals：使用 ${ } 來加入變數或函式
 // 使用 ${ apiUrl } 來插入變數
@@ -21,6 +16,7 @@ request(`${apiUrl}/name/${name}`, (error, response, body) => {
   if (error) {
     return console.log('讀取資料失敗', error);
   }
+
   // 用 JSON.parse處理JSON格式的字串
   // eslint-disable-next-line
   let data = JSON.parse(body);
@@ -29,6 +25,11 @@ request(`${apiUrl}/name/${name}`, (error, response, body) => {
   // 4xx：客戶端錯誤 表示客戶端提交的請求中有錯誤或者不能被完成
   if (data.status >= 400 && data.status < 500) {
     return console.log('找不到國家資訊');
+  }
+  // node hw3.js korea
+  // args[2] 需要是國家名稱
+  if (!name) {
+    return console.log('請輸入國家名稱');
   }
   for (let i = 0; i < data.length; i += 1) {
     console.log('========================');
