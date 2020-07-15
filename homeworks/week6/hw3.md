@@ -43,8 +43,8 @@ Box Model描述了 padding、margin、border 與 content 的空間定位。
 position 的屬性值有 static、relative、absolute、fixed 與 sticky。
 能定位、控制物件在畫面當中依據誰來做對齊、排列
 * stactic 網頁預設的定位方式
-* relative 相對定位 不會影響到其他元素
-* absolute 絕對定位
+* relative 相對定位，不會影響到其他元素，定位原點是元素本身所在位置 
+* absolute 定位點是往上找第一個 position 不是 static 的元素
 * fixed 固定定位
 * sticky為相對定位(relative)和固定定位(fixed)的混合體
 
