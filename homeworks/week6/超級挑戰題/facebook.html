@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <title>facebook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Questrial, 微軟正黑體;
+        }
+
+
+        .search {
+            background-color: #F0F2F5;
+            border-radius: 25px;
+            border: solid 1px #F0F2F5;
+            letter-spacing: 1px;
+            width: 250px;
+            height: 40px;
+        }
+
+
+        .nav {
+            display: flex;
+            padding: 0px 15px;
+            box-shadow: 0px 12px 8px -12px #97a2a0;
+            background: white;
+            align-items: center;
+            height: 84px;
+
+            justify-content: space-between;
+
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .wrapper {
+
+            justify-content: space-around;
+        }
+
+
+
+        .home,
+        .market,
+        .youtube,
+        .group,
+        .game {
+            margin: 0px 20px;
+            cursor: pointer;
+
+        }
+
+        .home:hover,
+        .market:hover,
+        .youtube:hover,
+        .group:hover,
+        .game:hover {
+            border: solid 5px #F0F2F5;
+            background-color: #F0F2F5;
+            border-radius: 5px;
+
+
+        }
+
+
+        .name {
+            border-radius: 25px;
+            background-color: #E9F3FE;
+            border: solid 1px #E9F3FE;
+            color: #2E79EA;
+            width: 80px;
+            height: 40px;
+            cursor: pointer;
+
+        }
+
+        .name:hover {
+            background-color: #CCE0F2
+        }
+
+        .plus,
+        .message,
+        .ring,
+        .triangle {
+            border-radius: 50%;
+            background-color: #F0F2F5;
+            border: solid 1px #F0F2F5;
+            justify-content: right;
+            margin: 0px 4px;
+            cursor: pointer;
+        }
+
+        .plus:hover,
+        .message:hover,
+        .ring:hover,
+        .triangle:hover {
+            background-color: #E5E7EA;
+            border: solid 1px #E5E7EA;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .photo {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .top {
+            background-image: linear-gradient(to bottom, #8DB8E1, transparent 50%);
+
+            justify-content: center;
+        }
+
+        .photo img {
+            border-radius: 0px 0px 10px 10px;
+            height: 450px;
+            max-width: 100%;
+            position: relative;
+        }
+
+        .myphoto img {
+
+            height: 160px;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-100px);
+
+            margin-top: -150px;
+
+
+            border-radius: 50%;
+            border: solid 4px white;
+        }
+
+        .en {
+            margin-top: 20px;
+            font-size: 36px;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        .ques {
+
+            display: flex;
+            color: #666666;
+
+            margin-left: 18px;
+        }
+
+        .status,
+        .about,
+        .friend,
+        .image,
+        .collection,
+        .film,
+        .more {
+            margin: 0px 8px;
+            font-weight: 450;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .status:hover,
+        .about:hover,
+        .friend:hover,
+        .image:hover,
+        .collection:hover,
+        .film:hover,
+        .more:hover {
+            border: solid 6px #E5E7EA;
+            background-color: #E5E7EA;
+            border-radius: 8px;
+        }
+
+        .info {
+            display: flex;
+            padding: 0px px;
+            box-shadow: 0px 12px 8px -12px #97a2a0;
+            background: white;
+            align-items: center;
+            height: 70px;
+            justify-content: space-between;
+        }
+
+        .edit {
+            margin-right: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .eye,
+        .find,
+        .mo {
+            margin: 0px 8px;
+            border: solid 3px #F0F2F5;
+            background-color: #F0F2F5;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .eye:hover,
+        .find:hover,
+        .mo:hover {
+            border: solid 4px #E5E7EA;
+            background-color: #E5E7EA;
+        }
+
+        .button1 {
+            border: solid 4px #F0F2F5;
+            background-color: #F0F2F5;
+            border-radius: 8px;
+            display: flex;
+            margin: 0px 8px;
+            text-decoration: none;
+            font-size: 15px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .button1:hover {
+            border: solid 4px #E5E7EA;
+            background-color: #E5E7EA;
+        }
+
+        @media(max-width: 768px) {
+            .wrapper {
+                display: none;
+            }
+
+            .name {
+                display: none;
+            }
+        }
+
+        @media(max-width: 500px) {
+            .search {
+                width: 120px;
+                letter-spacing: 0px;
+                font-size: 9px;
+
+            }
+
+            .photo img {
+
+                height: 300px;
+                max-width: 80%;
+
+            }
+
+            .myphoto img {
+
+                height: 140px;
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-90px);
+
+                margin-top: -140px;
+
+            }
+
+            .status,
+            .about,
+            .friend,
+            .image,
+            .collection,
+            .film {
+                display: none;
+            }
+
+            .button1 {
+                border: solid 5px #F0F2F5;
+                background-color: #F0F2F5;
+                border-radius: 8px;
+                display: flex;
+                margin: 0px 8px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                align-items: center;
+                cursor: pointer;
+                font-size: 8px;
+            }
+        }
+
+        @media(max-width: 414px) {
+            .search {
+                width: 100px;
+                letter-spacing: 0px;
+                font-size: 9px;
+
+            }
+
+            .photo img {
+
+                height: 250px;
+                max-width: 80%;
+
+            }
+
+            .myphoto img {
+
+                height: 120px;
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-70px);
+
+                margin-top: -120px;
+
+            }
+        }
+
+        @media(max-width: 375px) {
+
+            .plus,
+            .message,
+            .ring,
+            .triangle {
+                margin: 0px 0px;
+                transform: scale(0.8);
+            }
+
+            .photo img {
+
+                height: 220px;
+                max-width: 80%;
+
+            }
+
+            .myphoto img {
+
+                height: 120px;
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-70px);
+
+                margin-top: -120px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img class="facebook" src="https://img.icons8.com/fluent/48/000000/facebook-new.png" />
+            <input class="search" type="search" placeholder="   🔍 搜尋 facebook">
+        </div>
+
+        <div class="wrapper">
+            <img class="home" src="https://i.imgur.com/v0ucmau.png" />
+            <img class="youtube" src="https://i.imgur.com/7prQlwW.png" />
+            <img class="market" src="https://i.imgur.com/f48ffu6.png" />
+            <img class="group" src="https://i.imgur.com/I2s8pjS.png" />
+            <img class="game" src="https://i.imgur.com/RKo3DR4.png" />
+        </div>
+
+        <div class="right">
+            <button class="name" type="button">ruofan</button>
+            <img class="plus" src="https://i.imgur.com/uZ8vv3d.png" />
+            <img class="message" src="https://i.imgur.com/HKQQ8hq.png" />
+            <img class="ring" src="https://i.imgur.com/gAyQmES.png" />
+            <img class="triangle" src="https://i.imgur.com/llYLrZ1.png" />
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="photo">
+            <img src="https://i.imgur.com/XHpedTx.jpg">
+        </div>
+        <div class="myphoto">
+            <img src="https://i.imgur.com/vc26TVA.png">
+        </div>
+    </div>
+    <div class="myname">
+        <h2 class="en">Ruofan</h2>
+    </div>
+
+    <hr>
+
+    <div class="info">
+        <div class="ques">
+            <h4 class="status">動態時報</h4>
+            <h4 class="about">關於</h4>
+            <h4 class="friend">朋友<span>227</span></h3>
+                <h4 class="image">相片</h3>
+                    <h4 class="collection">典藏</h3>
+                        <h4 class="film">影片</h3>
+                            <h4 class="more">更多</h4><img class="ic" src="https://i.imgur.com/Y9pgiFP.png" />
+        </div>
+
+        <div class="edit">
+            <button class="button1"><img class="pen" src="https://i.imgur.com/N3SXFSe.png" />編輯個人檔案 </button>
+            <img class="eye" src="https://i.imgur.com/GpW8D7l.png" />
+            <img class="find" src="https://i.imgur.com/A8quuRs.png" />
+            <img class="mo" src="https://i.imgur.com/FChJJcQ.png" />
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
