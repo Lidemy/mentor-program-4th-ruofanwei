@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>新拖延運動報名表單</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 微軟正黑體;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:rgba(0,0,0,0.3);
+            
+        }
+
+        .container {
+            
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 645px;
+            box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+            background-color: white;
+
+        }
+
+        .top {
+
+            height: 8px;
+            margin-top: 20px;
+            border: solid 6px #fad312;
+            background-color: #fad312;
+
+        }
+
+        .wrapper {
+            margin: 54px 42px;
+
+        }
+
+        .description h1 {
+            font-weight: bold;
+            margin-bottom: 35px;
+            font-size: 36px;
+        }
+
+        .description h2 {
+            font-weight: normal;
+            margin-bottom: 11px;
+            font-size: 14px;
+            letter-spacing: normal;
+        }
+
+        .description h3 {
+            font-weight: normal;
+            margin-bottom: 22px;
+            font-size: 14px;
+            letter-spacing: normal;
+        }
+
+        .description h4 {
+            font-weight: normal;
+            font-size: 16px;
+            letter-spacing: normal;
+            color: #e74149;
+
+        }
+
+        .question {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question span {
+            color: #e74149;
+        }
+
+        .feedback {
+            border: solid 1px #d0d0d0;
+            width: 287px;
+            height: 23px;
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+
+        .choice_a {
+            margin-bottom: 23px;
+        }
+
+        .question p {
+            font-size: 14px;
+        }
+
+        .button {
+            background-color: #fad312;
+            border: solid 1px #fad312;
+            border-radius: 3px;
+            width: 92px;
+            height: 40px;
+            font-size: 15px;
+            transition: transform 0.1s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .remind {
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 21px;
+            padding-bottom: 35px;
+            padding-left: 39px;
+        }
+
+        @media(max-width: 414px) {
+            .description h1 {
+
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width: 375px) {
+            .description h1 {
+
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="top">
+        </div>
+        <div class="wrapper">
+            <div class="description">
+                <h1>新拖延運動報名表單</h1>
+                <h2>活動日期：2020/12/10 ~ 2020/12/11</h2>
+                <h3>活動地點：台北市大安區新生南路二段1號</h3>
+                <h4><span>*</span> 必填</h4>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <div class="question">暱稱 <span>*</span></div>
+            <input class="feedback" type="text" placeholder="您的回答">
+        </div>
+        <div class="wrapper">
+            <div class="question">電子郵件 <span>*</span></div>
+            <input class="feedback" type="email" placeholder="您的電子郵件">
+        </div>
+
+        <div class="wrapper">
+            <div class="question">手機號碼 <span>*</span></div>
+            <input class="feedback" type="tel" placeholder="您的手機號碼">
+        </div>
+
+
+        <div class="wrapper">
+            <div class="question">報名類型 <span>*</span></div>
+            <label>
+                <input class="choice_a" type="radio" name="status">
+                躺在床上用想像力實作
+            </label>
+            <br>
+            <input class="choice_b" type="radio" name="status">
+            趴在地上滑手機找現成的
+            </label>
+        </div>
+
+        <div class="wrapper">
+            <div class="question">怎麼知道這個活動的？ <span>*</span></div>
+            <input class="feedback" type="text" placeholder="您的回答">
+        </div>
+
+        <div class="wrapper">
+            <div class="question">其他<br>
+                <p>對活動的一些建議</p>
+            </div>
+            <input class="feedback" type="text" placeholder="您的回答">
+        </div>
+
+        <div class="wrapper">
+            <input class="button" type="submit" value="提交">
+
+        </div>
+        <h2 class="remind">請勿透過表單送出您的密碼。</h2>
+
+    </div>
+</body>
+
+</html>

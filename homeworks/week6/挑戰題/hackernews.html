@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Hacker News</title>
+    <style>
+        * {
+            list-style: none;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10pt;
+            font-family: Questrial, 微軟正黑體;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            background-color: #F6F6F0;
+            margin: auto;
+        }
+
+        .top {
+            background-color: #ff6600;
+
+            height: 24px;
+            display: flex;
+
+        }
+
+        .top img {
+            border: solid 1px white;
+            margin: 2px;
+        }
+
+        .top strong {
+            margin-left: 3px;
+        }
+
+        .top strong:hover {
+            color: #3b6978;
+        }
+
+        .page {
+
+            letter-spacing: 0.2px;
+            cursor: pointer;
+            margin-top: 3px;
+            box-sizing: inline-box;
+            display: flex;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul a {
+            display: inline-block;
+            text-decoration: none;
+            color: #666;
+        }
+
+        .menu {
+            max-width: 300px;
+            margin: 0 auto;
+            list-style-type: none;
+        }
+
+        .drop-down {
+            position: relative;
+        }
+
+        .submenu {
+            position: relative;
+            opacity: 0;
+            width: 100%;
+            z-index: 8;
+            transition: opacity 0.5s ease;
+        }
+
+        .submenu-item {
+            display: block;
+            height: 0px;
+            overflow: hidden;
+            transition: height 0.5s ease;
+        }
+
+        .drop-down:hover .submenu {
+            opacity: 1;
+        }
+
+        .drop-down:hover .submenu-item {
+            overflow: visible;
+            height: 30px;
+        }
+
+        .item {
+            position: relative;
+            margin-bottom: -3px;
+            width: 100%;
+            padding: 4px;
+            top: -3px;
+
+            text-align: center;
+            margin-left: 5px;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-name: item;
+
+        }
+
+        @keyframes item {
+            0% {
+
+                color: #17706e;
+            }
+
+            25% {
+
+                color: #f2a1a5e;
+            }
+
+            50% {
+
+                color: #6decb9;
+            }
+
+            75% {
+
+                color: #51eaea;
+            }
+
+            100% {
+
+                color: #ffd800;
+            }
+        }
+
+        .item:hover {
+            background-color: #ffe837;
+        }
+
+        .submenu-item {
+            position: relative;
+            background: #fdbfb3;
+            color: #107595;
+            width: 100%;
+            padding: 4px;
+            line-height: 30px;
+            text-align: center;
+            margin-left: 5px;
+             margin-top: -3px;
+
+        }
+
+        .submenu-item:hover {
+            background: #c19191;
+            color: #ffd700;
+            font-weight: bold;
+              margin-top: -3px;
+        }
+
+        .article {
+            background-color: #F6F6F0;
+
+
+            border-bottom: solid 2px #ff6600;
+
+        }
+
+        .article span {
+            margin-left: 4px;
+            cursor: pointer;
+        }
+
+        .article p1 {
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .article p2 {
+            letter-spacing: 0.2px;
+
+        }
+
+        .article p3 {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 8px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        .article p3:hover {
+            color: #127681;
+        }
+
+        .article p4 {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 8px;
+            margin-left: 31px;
+            cursor: pointer;
+        }
+
+        .wrapper {
+            margin: 20px 20px;
+
+
+        }
+
+        .article p5 {
+            color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            right: 7px;
+            cursor: pointer;
+        }
+
+        .wrapper spat {
+            right: 4px;
+            position: relative;
+            cursor: pointer;
+
+
+        }
+
+        .article p6 {
+            letter-spacing: 0.2px;
+            position: relative;
+            right: 4px;
+        }
+
+        .article p7 {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 8px;
+            margin-left: 8px;
+            position: relative;
+            right: 4px;
+            cursor: pointer;
+        }
+
+        .article p7:hover {
+            color: #127681;
+        }
+
+        .wrapper p8 {
+            position: relative;
+            left: 28px;
+            cursor: pointer;
+        }
+
+        .wrapper p8:hover {
+            color: #4f8a8b;
+            font-weight: bold;
+        }
+
+        .footer {
+            height: 100px;
+
+            position: relative;
+
+        }
+
+        .footer p10 {
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            left: 50%;
+            white-space: nowrap;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .footer p9 {
+            position: absolute;
+            cursor: pointer;
+            top: 18%;
+            left: 50%;
+            white-space: nowrap;
+            transform: translate(-50%, -10%);
+            text-align: center;
+
+        }
+
+        .footer label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            white-space: nowrap;
+            transform: translate(-50%, 100%);
+        }
+
+        @media(max-width: 500px) {
+            .wrapper {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+            }
+
+            .article p5 {
+                width: 12em;
+                height: 6em;
+                display: inline-block;
+                margin: 2%;
+                width: 2%;
+                height: 2%;
+
+            }
+
+        }
+
+        @media(max-width: 375px) {
+
+            .footer p9,
+            p10 {
+                font-size: 12px;
+                ;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top">
+            <img src="https://news.ycombinator.com/y18.gif" alt="" />
+            <span class="page">
+                <strong>Haker News</strong>
+                <span>
+                    <ul class="menu">
+                        <li class="drop-down">
+                            <a class="item" href="#">new</a>
+                            <div class="submenu">
+                                <a class="submenu-item">past</a>
+                                <a class="submenu-item">comments</a>
+                                <a class="submenu-item">asks</a>
+                                <a class="submenu-item">show</a>
+                                <a class="submenu-item">jobs</a>
+                                <a class="submenu-item">submit</a>
+                                <a class="submenu-item">login</a>
+                </span>
+        </div>
+        </li>
+        </ul>
+        </span>
+
+
+    </div>
+
+    <div class="article">
+
+        <div class="wrapper">
+            <p1>1.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>Google to Invest $10B in India</p2>
+            <p3>(techcrunch.com)</p3>
+            <br>
+            <p4>92 points by jmsflknr 2 hours ago | hide | 32 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>2.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>The Most Remarkable Legacy System I Have Seen</p2>
+            <p3>(thehftguy.com)</p3>
+            <br>
+            <p4>86 points by user5994461 3 hours ago | hide | 11 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>3.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>Website allows you to experience what it is like to live with dyslexia</p2>
+            <p3>(geon.github.io)</p3>
+            <br>
+            <p4>260 points by colinprince 8 hours ago | hide | 91 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>4.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>G Science is the belief in the ignorance of experts </p2>
+            <p3>(lemire.me)</p3>
+            <br>
+            <p4> 45 points by zdw 1 hour ago | hide | 34 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>5.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>Your DS18B20 temperature sensor is likely a fake, counterfeit, clone</p2>
+            <p3>(github.com)</p3>
+            <br>
+            <p4> 329 points by 0x402DF854 10 hours ago | hide | 188 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>6.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>Tutorial sites treating FreeBSD like a Linux distro</p2>
+            <p3>(rubenerd.com)</p3>
+            <br>
+            <p4>27 points by todsacerdoti 1 hour ago | hide | 9 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>7.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>Text-Only Social Network</p2>
+            <p3>(subreply.com)</p3>
+            <br>
+            <p4>362 points by lcnmrn 14 hours ago | hide | 189 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>8.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>WindowSwap: View someone's window somewhere in the world</p2>
+            <p3>(window-swap.com)</p3><br>
+            <p4>282 points by rosstex 11 hours ago | hide | 46 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p1>9.</p1><span class="tri"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></span>
+            <p2>Pulsar – an open-source distributed pub-sub messaging platform</p2>
+            <p3>(github.com)</p3>
+            <br>
+            <p4>72 points by dragonsh 8 hours ago | hide | 20 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>10.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Two Black Holes Colliding Not Enough? Make It Three</p6>
+            <p7>(nytimes.com)</p7>
+            <br>
+            <p4>19 points by Hooke 4 hours ago | hide | 2 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>11.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Website allows you to experience what it is like to live with dyslexia</p6>
+            <p7>(geon.github.io)</p7>
+            <br>
+            <p4>339 points by colinprince 12 hours ago | hide | 137 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>12.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Dark Web Price Index 2020</p6>
+            <p7>(privacyaffairs.com)</p7>
+            <br>
+            <p4>131 points by known 6 hours ago | hide | 94 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>13.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Debunking the Myth of 10% Brain Usage</p6>
+            <p7>(iuliangulea.com)</p7>
+            <br>
+            <p4>20 points by iuliangulea 55 minutes ago | hide | 14 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>14.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Soul Meets Body: The Samkhya School of Philosophy</p6>
+            <p7>(worthypatterns.substack.com)</p7>
+            <br>
+            <p4>34 points by hyperindexed 5 hours ago | hide | discuss</p4>
+        </div>
+        <div class="wrapper">
+            <p5>15.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Uncleftish Beholding: An Uploosening of English Cleanness (2018)</p6>
+            <p7>(usask.ca)</p7>
+            <br>
+            <p4> 22 points by samclemens 4 hours ago | hide | 12 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>16.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Google Search Upgrades Make It Harder for Websites to Win Traffic</p6>
+            <p7>(bloomberg.com)</p7>
+            <br>
+            <p4>91 points by kupatrupa 3 hours ago | hide | 53 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p5>17.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Sufferings Beyond Our Expressing</p6>
+            <p7>(laphamsquarterly.org)</p7>
+            <br>
+            <p4>3 points by lermontov 1 hour ago | hide | discuss</p4>
+        </div>
+        <div class="wrapper">
+            <p5>18.</p5>
+            <spat class="trian"><img src="https://news.ycombinator.com/grayarrow2x.gif" width="11"></spat>
+            <p6>Pulsar – an open-source distributed pub-sub messaging platform</p6>
+            <p7>(github.com)</p7>
+            <br>
+            <p4>123 points by dragonsh 12 hours ago | hide | 42 comments</p4>
+        </div>
+        <div class="wrapper">
+            <p8>more</p8>
+        </div>
+    </div>
+    <div class="footer">
+        <p9>Guidelines | FAQ | Support | API | Security</p9>
+        <p10>Lists | Bookmarklet | Legal | Apply to YC | Contact</p10>
+        <label>Search: <input type="search"></label>
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
