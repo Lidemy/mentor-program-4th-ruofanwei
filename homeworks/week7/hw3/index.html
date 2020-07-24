@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>todolist</title>
+    <style type="text/css">
+        @import "todolist.css";
+    </style>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <div class="todoList">
+
+        <div class="cover-img">
+            <div class="cover-inner">
+                <h3>todo list</h3>
+            </div>
+        </div>
+
+        <div class="content">
+            <form class="add">
+                <input type="text" name="add" placeholder="Add something todo...">
+                <div class="input-buttons">
+                    <a href="#" class="add-todo">
+                        <i class="fas fa-plus add"></i>
+                    </a>
+                </div>
+            </form>
+            <ul class="todos">
+                <li>
+                    <input type="checkbox" id="todo-1" />
+                    <label for="todo-1">
+                        <span class="check"></span>Learning - Lidemy
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo-2" />
+                    <label for="todo-2">
+                        <span class="check"></span> Ｇo jogging
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo-3" />
+                    <label for="todo-3">
+                        <span class="check"></span> Get some shut-eye
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo-4" />
+                    <label for="todo-4">
+                        <span class="check"></span> Do yoga
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script src="todolist.js" charset="UTF-8"></script>
+</head>
+
+</html>
