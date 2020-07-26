@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>新拖延運動報名表單</title>
+    <style type="text/css">
+        @import "hw1.css";
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top">
+            <div class="header">
+                <h2>新拖延運動報名表單</h2>
+                <h4>活動日期：2020/12/10 ~ 2020/12/11</h4>
+                <h4>活動地點：台北市大安區新生南路二段1號</h4>
+                <h5><span>*</span> 必填</h5>
+            </div>
+        </div>
+        <form novalidate id="form" class="form">
+            <div class="form-control required hide-error">
+                <label for="username">暱稱 <span>*</span></label>
+                <input type="text" placeholder="您的回答" id="username" name="暱稱" />
+                <small class="error-message">❗暱稱為必填，請重新確認</small>
+            </div>
+
+            <div class="form-control required hide-error">
+                <label for="email">電子郵件 <span>*</span></label>
+                <input type="text" placeholder="您的電子郵件" id="email" name="電子郵件" />
+                <small class="error-message">❗電子郵件為必填，請重新確認</small>
+            </div>
+
+            <div class="form-control required hide-error">
+                <label for="tel">手機號碼 <span>*</span></label>
+                <input type="text" placeholder="您的手機號碼" id="tel" name="手機號碼" />
+                <small class="error-message">❗手機號碼為必填，請重新確認</small>
+            </div>
+
+            <div class="wrapper required hide-error">
+                <div class="question">報名類型 <span>*</span></div>
+                <label>
+                    <input class="radios1" type="radio" name="報名類型" id="radio1" value="躺在床上用想像力實作">
+                    躺在床上用想像力實作
+                </label>
+                <br>
+                <label>
+                    <input class="radios2" type="radio" name="報名類型" id="radio2" value="趴在地上滑手機找現成的">
+                    趴在地上滑手機找現成的
+                </label>
+                <br>
+                <small class="error-message">❗報名類型為必選，請重新確認</small>
+            </div>
+
+
+            <div class="form-control required hide-error">
+                <label for="how">怎麼知道這個活動的？ <span>*</span></label>
+                <input type="text" placeholder="您的回答" id="how" name="怎麼知道這個活動的?" />
+                <small class="error-message">❗此欄位為必填，請重新確認</small>
+            </div>
+
+            <div class="wrapper">
+                <div class="question">其他<br>
+                    <p>對活動的一些建議</p>
+                </div>
+                <input class="feedback" type="text" placeholder="您的回答" id="advice" name="對活動的一些建議">
+            </div>
+
+            <button>提交</button>
+            <h2 class="remind">請勿透過表單送出您的密碼。</h2>
+        </form>
+    </div>
+    <script src="hw1.js" charset="UTF-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+
+* {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+
+.top {
+  border-top: solid 6px #fad312;
+  
+
+}
+
+.container {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 645px;
+  max-width: 100%;
+}
+
+.header {
+  background-color: white;
+  padding: 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.heade h4 {
+  font-weight: normal;
+  margin-bottom: 22px;
+  font-size: 12px;
+  letter-spacing: normal;
+}
+
+.header h5 {
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: normal;
+  color: #e74149;
+
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control span {
+  color: #e74149;
+}
+
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+
+
+
+
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.hide-error .error-message {
+  visibility: hidden;
+}
+
+.error-message {
+  margin-top: 4px;
+  color: #e74149;
+  position: absolute;
+}
+
+
+
+.wrapper {
+  margin: 40px 0px;
+
+}
+
+.question span {
+  color: #e74149;
+}
+
+.radios1 {
+  margin-bottom: 23px;
+  margin-top: 20px;
+
+}
+
+.question p {
+  font-size: 14px;
+}
+
+.feedback {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form button {
+  background-color: #fad312;
+  border: 2px solid #fad312;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 0px;
+  margin-top: 20px;
+  width: 30%;
+}
+
+.remind {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 21px;
+  padding-bottom: 35px;
+}

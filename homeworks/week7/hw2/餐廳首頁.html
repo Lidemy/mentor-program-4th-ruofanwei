@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>餐廳官網</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: Questrial, 微軟正黑體;
+        }
+
+        .navbar {
+            box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+            padding: 0px 24px;
+        }
+
+        .navbar .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 84px;
+            background: white;
+            padding: 0px 15px;
+        }
+
+        .navbar_site_name {
+            color: #489846;
+            font-size: 36px;
+        }
+
+        .navbar_list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-size: 18px;
+
+        }
+
+        .navbar_list li {
+            margin-left: 8px;
+            border-radius: 8px;
+            transition: background 0.1s ease-in;
+        }
+
+        .navbar_list li.active,
+        .navbar_list li:hover {
+            background-color: #ff7286;
+        }
+
+        .navbar_list li.active a,
+        .navbar_list li:hover a {
+            color: white;
+        }
+
+        .navbar_list li a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 12px 5px;
+
+        }
+
+        .wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0px 12px;
+        }
+
+        .banner {
+            position: relative;
+            height: 450px;
+            max-width: 100%;
+            background: url(https://cdn.zeplin.io/5eab7fd61be0341bdeed0db0/assets/853f78e6-476a-400f-8008-ab64ea065c92.png) center/cover no-repeat;
+        }
+
+        .banner:after {
+            content: '';
+            position: absolute;
+            background: rgba(0, 0, 0, 0.35);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .banner h1 {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            font-size: 60px;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .booking {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .title {
+            display: inline-block;
+            font-size: 36px;
+            border-left: solid 15px #a3dea2;
+            padding-left: 16px;
+            letter-spacing: 15px;
+            margin-bottom: 36px;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 2em;
+            margin: 0px 0px 68px 0px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+        }
+
+        .button_A,
+        .button_B {
+            padding: 60px 80px;
+            font-size: 36px;
+            color: #3e613d;
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.1s;
+            border-radius: 12px;
+        }
+
+        .button_A:hover,
+        .button_B:hover {
+            transform: scale(1.1);
+        }
+
+        .button_A {
+            background-color: #a8e8e1;
+        }
+
+        .button_B {
+            margin-left: 23px;
+            background-color: #f9f9b5;
+        }
+
+        .menu {
+            text-align: center;
+            margin-top: 80px;
+
+        }
+
+        .images {
+            display: flex;
+
+        }
+
+        .images div {
+            width: 25%;
+
+        }
+
+        .images img {
+            width: 100%;
+
+
+        }
+
+        .map {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        footer {
+            margin-top: 32px;
+
+        }
+
+        .footer_info .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer_info {
+            background-color: #e8efee;
+            padding: 32px;
+            color: #484848;
+        }
+
+        .footer_bottom {
+            background-color: #35564b;
+            color: white;
+            letter-spacing: 2px;
+            font-size: 13px;
+            text-align: center;
+            padding: 12px 0px;
+        }
+
+        .footer_info p {
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+        }
+
+        .footer_media {
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+        }
+
+        .footer_contact {
+            margin-left: 16px;
+        }
+
+        .footer_logo {
+            color: #489846;
+            font-size: 36px;
+        }
+
+        .comment {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .row {
+            display: flex;
+
+
+
+        }
+
+        .customer {
+
+            border: solid 1px #c7e5ec;
+            border-radius: 8px;
+            box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            margin-top: 50px;
+            margin-left: 10px;
+
+        }
+
+        .customer img {
+            border: solid 1px rgba(0, 0, 0, 0.15);
+            box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+
+        }
+
+        .name {
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+            margin-top: 55px;
+        }
+
+        .text {
+            letter-spacing: 3px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+            text-align: justify;
+            margin: 12px 10px;
+
+
+
+        }
+
+
+        @media(max-width: 768px) {
+            .navbar .wrapper {
+                height: 120px;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 0px;
+
+            }
+
+            .navbar_site_name {
+                margin-bottom: 0px;
+                font-size: 36px;
+            }
+
+            .navbar_list {
+                display: flex;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            .navbar_list li {
+                flex: 1;
+                margin-left: 0;
+                border-radius: 0;
+                text-align: center;
+            }
+
+            .navbar_list li a {
+                padding: 10px 3px;
+            }
+
+            .banner {
+                height: 350px;
+            }
+
+            .content {
+                font-size: 16px;
+                line-height: 1.6em;
+                margin: 30px 0px 42px 0px;
+                letter-spacing: 1px;
+            }
+
+            .footer_info {
+                font-size: 15px;
+            }
+
+            .footer_logo {
+                font-size: 30px;
+                margin-left: 30px;
+            }
+
+            .footer_media {
+                margin-left: 30px;
+                font-size: 12px;
+            }
+
+        }
+
+        @media(max-width: 500px) {
+            .banner {
+                height: 200px;
+            }
+
+            .banner h1 {
+                font-size: 40px;
+            }
+
+            .title {
+                letter-spacing: 8px;
+                font-size: 26px;
+            }
+
+            .content {
+                font-size: 16px;
+                line-height: 1.6em;
+                margin: 30px 0px 42px 0px;
+                letter-spacing: 1px;
+            }
+
+            .button_A,
+            .button_B {
+                padding: 30px 42px;
+                font-size: 25px;
+
+            }
+
+            .images {
+                flex-direction: column;
+            }
+
+            .images div {
+                width: 100%;
+            }
+
+            .images img {
+                vertical-align: top;
+            }
+
+            .footer_info .wrapper {
+                flex-direction: column-reverse;
+            }
+
+            .footer_contact {
+                margin-left: 0;
+                text-align: center;
+                margin: 16px;
+            }
+
+            .footer_logo {
+                font-size: 20px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .customer {
+                width: 100%;
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+        }
+
+        @media(max-width: 414px) {
+            .banner {
+                height: 180px;
+            }
+
+            .banner h1 {
+                font-size: 40px;
+            }
+
+            .title {
+                letter-spacing: 6px;
+                font-size: 25px;
+            }
+
+            .button_A,
+            .button_B {
+                padding: 25px 32px;
+                font-size: 20px;
+
+            }
+
+            .images {
+                flex-direction: column;
+            }
+
+            .images div {
+                width: 100%;
+            }
+
+            .images img {
+                vertical-align: top;
+            }
+
+            .footer_info .wrapper {
+                flex-direction: column-reverse;
+            }
+
+            .footer_contact {
+                margin-left: 0;
+                margin: 16px;
+                text-align: center;
+            }
+
+            .footer_info {
+                font-size: 12px;
+            }
+
+            .footer_logo {
+                font-size: 20px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .customer {
+                width: 100%;
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+        }
+
+        @media(max-width: 375px) {
+
+            .navbar_list {
+                display: flex;
+                width: 100%;
+                font-size: 16px;
+            }
+
+            .navbar_site_name {
+                font-size: 36px;
+            }
+
+            .banner {
+                height: 170px;
+            }
+
+            .banner h1 {
+                font-size: 40px;
+            }
+
+            .title {
+                letter-spacing: 6px;
+                font-size: 24px;
+            }
+
+            .button_A,
+            .button_B {
+                padding: 25px 32px;
+                font-size: 20px;
+
+            }
+
+            .images {
+                display: flex;
+            }
+
+            .images div {
+                width: 100%;
+
+            }
+
+            .images img {
+                vertical-align: top;
+            }
+
+            .footer_bottom {
+                font-size: 8px;
+            }
+
+            .footer_info .wrapper {
+                flex-direction: column-reverse;
+            }
+
+            .footer_contact {
+                margin-left: 0;
+                margin: 16px;
+                text-align: center;
+            }
+
+            .footer_info {
+                font-size: 12px;
+            }
+
+            .footer_logo {
+                font-size: 20px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .customer {
+                width: 100%;
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+
+        }
+
+        @media(max-width: 320px) {
+            .buttons {
+                flex-direction: column;
+            }
+
+            .button_A,
+            .button_B {
+                vertical-align: top;
+            }
+
+            .button_B {
+                margin-top: 10px;
+                position: relative;
+                right: 11px;
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class='navbar'>
+        <div class="wrapper">
+            <div class="navbar_site_name">
+                Just A Bite!
+            </div>
+            <ul class='navbar_list'>
+                <li class='active'><a href="#">抽個大獎</a></li>
+                <li><a href="#" type="button">我要點餐</a></li>
+                <li><a href="#" type="button">查詢訂單</a></li>
+                <li><a href="#" type="button" onclick="location.href='常見問題.html'">常見問題</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <h1>咬一口廚房</h1>
+
+    </section>
+
+    <div class="wrapper">
+        <section class="booking">
+            <h2 class="title">
+                當輕食之風盛起
+            </h2>
+            <p class="content">
+                由於現代人生活忙碌，常以外食為主，當高糖、高鹽、高油成為人們的日常，會導致慢性疾病與肥胖的機率大增。
+                <br>
+                我們定期走訪農田，選用最天然、營養的食材，以簡單的烹調方式處理，最大化忠實呈現食材原本的鮮味。
+                <br>
+                咬一口不只賣餐點，我們希望能夠讓大家愛上料理的魅力，餐館特意打造全開放式廚房，烹調透明化，也不定時舉辦美食廚房DIY，讓大家體驗不需要過多調味，就能擁有千變萬化的食物口感。
+            </p>
+            <div class="buttons">
+                <div class="button_A">
+                    我要點餐
+                </div>
+                <div class="button_B">
+                    查詢訂單
+                </div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2 class="title">
+                Menu 搶先看
+            </h2>
+            <div class="images">
+
+                <div><img src="https://i.imgur.com/Hi8Mrd6.png" /></div>
+                <div><img src="https://i.imgur.com/vG6TSWl.png" /></div>
+                <div><img src="https://i.imgur.com/lnB7AiM.png" /></div>
+                <div><img src="https://i.imgur.com/pewjgsi.png" /></div>
+
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <section class="comment">
+                <h2 class="title">
+                    吃過都說好
+                </h2>
+
+                <div class="row">
+
+                    <div class="customer">
+                        <img src="https://i.imgur.com/G1UzAt4.png" />
+                        <h4 class="name">
+                            國父桑
+                        </h4>
+                        <h6 class="text">
+                            我一生疲於建國，去過日本，去過歐洲，卻從未到過台北101，也從來沒有吃過這麼好吃的東西...今天在時空旅行者的幫助下我終於吃到了...此生再無遺憾 QAQ!!
+                        </h6>
+                    </div>
+                    <div class="customer">
+                        <img src="https://i.imgur.com/jIYvlAb.png" />
+                        <h4 class="name">
+                            可達鴨
+                        </h4>
+                        <h6 class="text">
+                            三雙鞋等於30，兩個人加一雙鞋等於20，一雙冰淇淋加一雙冰淇淋加一個人等於13，那$#%$#%^%$^##$%等於多少...唉，大概咬一口就知道了!!!
+
+
+                        </h6>
+                    </div>
+                    <div class="customer">
+                        <img src="https://i.imgur.com/7EWmUHY.png" />
+                        <h4 class="name">
+                            旅かえる旅行青蛙
+
+                        </h4>
+                        <h6 class="text">
+                            自從呱呱呱呱呱以後，我呱呱呱呱呱，非常感謝呱呱呱呱呱，下次呱呱呱呱呱我呱呱呱呱呱，一定呱呱呱呱呱!!!
+
+
+                        </h6>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="wrapper">
+            <section class="map">
+                <h2 class="title">
+                    我們在哪裡
+                </h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57840.18805162603!2d121.52986417910155!3d25.03367519999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6e9d93249%3A0xd508f7b3aa02d931!2z5Y-w5YyXMTAx6KeA5pmv5Y-w!5e0!3m2!1szh-TW!2stw!4v1594465650664!5m2!1szh-TW!2stw"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+
+
+        <div class="footer_info">
+
+            <div class="wrapper">
+                <div class="address">
+                    <p>
+                        餐館地址: 天上地下天堂路三分之一里六段520號
+                    </p>
+                    <p>
+                        訂位專線：02-1314-5566
+                    </p>
+                    <p>
+                        營業時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息
+                    </p>
+                    <p>
+                        email：service@justabite.com.tw
+                    </p>
+
+                </div>
+                <div class="footer_contact">
+                    <div class="footer_logo">Just A Bite!</div>
+                    <div class="footer_media">Facebook / Instagram / Youtube</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            Copyright © 2020 Just A Bite All Rights Reserved. 咬一口股份有限公司版權所有
+        </div>
+    </footer>
+</body>
+
+</html>
