@@ -71,16 +71,19 @@ html {
   margin: 0 auto;
   padding: 0px 12px;
 }
+
 .wrapper {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0px 12px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 12px;
 }
 
 .container {
   margin: auto;
   max-width: 810px;
   text-align: center;
+  margin-bottom: 10px;
+  
 }
 
 .faqTitle {
@@ -119,8 +122,6 @@ html {
   transform: translateY(0);
 
 }
-
-
 
 .problem {
   color: #70b282;
@@ -184,47 +185,46 @@ html {
 
 
 
-        .footer_info .wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
+.footer_info .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
-        .footer_info {
-            background-color: #e8efee;
-            padding: 32px;
-            color: #484848;
-        }
+.footer_info {
+  background-color: #e8efee;
+  padding: 32px;
+  color: #484848;
+}
 
-        .footer_bottom {
-            background-color: #35564b;
-            color: white;
-            letter-spacing: 2px;
-            font-size: 13px;
-            text-align: center;
-            padding:23px 0px;
-            margin-bottom: 0px;
-        }
+.footer_bottom {
+  background-color: #35564b;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-align: center;
+  padding: 23px 0px;
+  margin-bottom: 0px;
+}
 
-        .footer_info p {
-            margin-top: 10px;
-            color: rgba(0, 0, 0, 0.6);
-            font-weight: normal;
-        }
+.footer_info p {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: normal;
+}
 
-        .footer_media {
-            color: rgba(0, 0, 0, 0.6);
-            font-weight: normal;
-        }
+.footer_media {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: normal;
+}
 
-        .footer_contact {
-            margin-left: 16px;
-        }
+.footer_contact {
+  margin-left: 16px;
+}
 
-        .footer_logo {
-            color: #489846;
-            font-size: 36px;
-        }
-
+.footer_logo {
+  color: #489846;
+  font-size: 36px;
+}
 
 
 @media(max-width: 768px) {
@@ -239,7 +239,7 @@ html {
   .navbar_site_name {
     margin-bottom: 0px;
     font-size: 36px;
-    
+
   }
 
   .navbar_list {
@@ -265,7 +265,7 @@ html {
 
   .footer_info {
     font-size: 15px;
-    padding:45px 0px;
+    padding: 45px 0px;
   }
 
   .footer_logo {
@@ -277,15 +277,17 @@ html {
     margin-left: 30px;
     font-size: 12px;
   }
-  .footer_bottom {
-  margin-bottom: 0px;
-  position: relative;
-  padding:20px 0px;
 
-}
-.container {
-  max-width: 700px;
-}
+  .footer_bottom {
+    margin-bottom: 0px;
+    position: relative;
+    padding: 20px 0px;
+
+  }
+
+  .container {
+    max-width: 700px;
+  }
 
 
 }
@@ -306,13 +308,16 @@ html {
   .footer_logo {
     font-size: 20px;
   }
-.container {
-  max-width: 480px;
-}
-.content h2 {
-  font-size: 16px;
-}
-footer {
+
+  .container {
+    max-width: 480px;
+  }
+
+  .content h2 {
+    font-size: 16px;
+  }
+
+  footer {
     margin-top: 50px;
   }
 
@@ -332,8 +337,9 @@ footer {
 
   .footer_info {
     font-size: 12px;
-    
+
   }
+
   footer {
     margin-top: 80px;
   }
@@ -341,21 +347,25 @@ footer {
   .footer_logo {
     font-size: 20px;
   }
-  .problem{
+
+  .problem {
     font-size: 18;
-      line-height: 36px;
+    line-height: 36px;
   }
+
   .container {
-  max-width: 410px;
-}
+    max-width: 410px;
+  }
+
   .content h2 {
     position: relative;
-  font-size: 16px;
-  top: 10px;
-}
-.faqTitle {
-  font-size: 23px;
-}
+    font-size: 16px;
+    top: 10px;
+  }
+
+  .faqTitle {
+    font-size: 23px;
+  }
 
 
 }
@@ -394,35 +404,37 @@ footer {
   .footer_logo {
     font-size: 20px;
   }
-  .problem{
+
+  .problem {
     font-size: 17;
   }
+
   .container {
-  max-width: 370px;
-}
+    max-width: 370px;
+  }
+
   .content h2 {
     position: relative;
-  font-size: 16px;
-  top: 10px;
-}
+    font-size: 16px;
+    top: 10px;
+  }
 
 
 }
+
 @media(max-width: 320px) {
-  .problem{
+  .problem {
     font-size: 16;
   }
+
   .container {
-  max-width: 315px;
-}
+    max-width: 315px;
+  }
+
   .content h2 {
     position: relative;
-  font-size: 16px;
-top: 10px;
-  
+    font-size: 16px;
+    top: 10px;
+
+  }
 }
-}
-
-
-
-
