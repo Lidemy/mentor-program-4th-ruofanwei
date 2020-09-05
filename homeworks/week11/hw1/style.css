@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:600,700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  
+}
+body{
+  margin: 0;
+  background: #dfd3d3;
+}
+.warning{
+  background-color: #ffdd67;
+  color: #921224;
+  padding: 10px;
+  text-align: center;
+}
+.title{
+  color: #89c9b8;
+}
+.board{
+  background-color: #fff;
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+}
+.user_list{
+  background-color: #fff;
+  min-width: 300px;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+}
+.message{
+  background-color: #fff;
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+  min-height: 150px;
+}
+.card{
+  margin: 20px 0;
+  max-height: 120px;
+  display: flex;
+}
+textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e4e3e3;
+  outline: none;
+  border-radius: 5px;
+  color: #e7dfd5;
+  font-weight: bold;
+  font-size: 22px;
+  
+ 
+}
+textarea:hover{
+  border: 1px solid #ffd31d;
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+
+.nickname{
+  margin-bottom: 10px;
+  
+}
+input[type=text],[type=password]{
+  border: 1px solid #c2dffb;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  color: #c7b198;
+  font-weight: bold;
+}
+input[type=text]:hover,[type=password]:hover{
+  border: 1px solid #ffd31d;
+}
+.submit{
+  padding: 10px;
+  border: 1px solid #e4e3e3;
+  border-radius: 5px;
+  width: 100px;
+  color: #17706e;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  
+
+}
+.submit:hover{
+  background-color: #dfd3c3;
+  color: #ba7967;
+  font-weight: bold;
+  border: 1px solid #dfd3c3;
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+.submit:active{
+  background-color: #ffd31d;
+  color: #00bcd4;
+  font-weight: bold;
+  border: 1px solid #ffd31d;
+}
+
+
+.avatar{
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0ece3;
+  position: relative;
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+.avatar_img{
+  border-radius: 50%;
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  overflow:hidden;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -40%);
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+.card_body{
+  margin-left: 10px;
+}
+.card_content{
+  margin-top: 8px;
+  max-width: 100%;
+  word-break: break-word; /* 顯示的資料在框框中會自動換行 */
+  white-space: pre-line; /* 輸入資料有換行時，顯示的資料也要換行 */
+  color: #d9adad;
+  overflow: auto;
+  max-height: 100px;
+}
+.card_author{
+  color: #99b898;
+  font-weight: bold;
+}
+.update_comment{
+  color: #e4e3e3;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.update_comment:hover{
+  color: #ffd31d;
+}
+.delete_comment{
+  color: #e4e3e3;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.delete_comment:hover{
+  color: #ffd31d;
+}
+.card_time{
+  color: #e4e3e3;
+}
+.btn{
+  padding: 10px 30px;
+  border: 1px solid #e4e3e3;
+  border-radius: 5px;
+  color: #17706e;
+  font-size: 16px;
+  background-color: white;
+  min-width: 20px;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+.btn:hover{
+  background-color: #dfd3c3;
+  color: #ba7967;
+  border: 1px solid #dfd3c3;
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+.btn:active{
+  background-color: #ffd31d;
+  color: #00bcd4;
+  border: 1px solid #ffd31d;
+}
+.error, .advice{
+  color: #ffd3b6;
+}
+.hi{
+  color: #ffd571;
+  letter-spacing: 1px;
+  animation-name: name;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+.account,.password,.nickname{
+  color: #ba7967;
+}
+.hide{
+  display: none;
+}
+.board_nickname_form{
+  margin-top: 20px;
+}
+.new_nickname {
+  color: #89c9b8;
+}
+.update_nickname,.backstage{
+  cursor: pointer;
+}
+.page_info{
+  margin: 5px auto;
+  padding: 5px 5px;
+  color: #ba7967;
+  text-decoration: none;
+  text-align: center;
+  max-width: 600px;
+  letter-spacing: 1px;
+}
+.paginator{
+  margin: 5px auto;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  max-width: 600px;
+  
+}
+.paginator a {
+  text-decoration: none;
+  margin-left: 5px;
+  text-align: center;
+  padding: 7px;
+  border: solid 1px #e4e3e3;
+  border-radius: 5px;
+  min-width: 80px;
+  color: #ba7967;
+  outline: none;
+  cursor: pointer;
+}
+.paginator a:hover {
+  color: #00bcd4;
+  background-color: #ffd31d;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  
+}
+@keyframes name {
+      0% {
+
+        color: #fddb3a;
+      }
+
+      25% {
+
+        color: #e7dfd5;
+      }
+
+      50% {
+
+        color: #f0e3ff;
+      }
+
+      75% {
+
+        color: #e1ccec;
+      }
+
+      100% {
+
+        color: #ffdbc5;
+      }
+    }
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+table, th, td{
+  border: 1px solid #e8ded2;
+  color: #ba7967;
+  text-align: center;
+  
+}
+th{
+  background-color: #dfd3c3;
+  color: #ba7967;
+}
+td, th{
+padding: 12px 32px;
+}
+td{
+  color: #99b898;
+}
+.update_role{
+  color: #99b898;
+  text-decoration: none;
+  
+}
+.update_role:hover{
+  color: #ffd31d;
+}
