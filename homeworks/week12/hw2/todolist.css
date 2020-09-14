@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:600,700&display=swap');
+
+* {
+  font-family: 'Nunito', 微軟正黑體;
+  /*border: solid 1px;*/
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: #84a9ac;
+  border-radius: 5px;
+  border: solid 1px #84a9ac;
+}
+
+
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-todo {
+  display: flex;
+
+}
+
+.add-todo i {
+  margin-right: 25px;
+  font-size: 20px;
+  color: #595238;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #84a9ac;
+  height: 60px;
+  color: #ffc93c;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.container {
+  margin-top: 30px;
+  background-color: #84a9ac;
+
+}
+
+.top {
+  display: flex;
+}
+
+body {
+  background-color: #84a9ac;
+}
+
+.card-title {
+  color: #ffc93c;
+}
+
+.edit-todo i {
+  margin-left: 25px;
+  color: #595238;
+  cursor: pointer;
+}
+
+.add-todo {
+  margin-left: 25px;
+}
+
+.btn-add-data,
+.save,
+.filter-delete,
+.all,
+.active,
+.done {
+  margin-left: 45px;
+  text-decoration: none;
+  border: solid 2px #ffc93c;
+  outline: none;
+  color: #595238;
+}
+.all,
+.active,
+.done {
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  right: 38px;
+
+}
+.page{
+  padding: 0;
+}
+.filter-delete{
+  background-color: none;
+  
+
+}
+.btn-add-data:hover,
+.save:hover,
+.filter-delete:hover,
+.all:hover,
+.active:hover,
+.done:hover{
+  background-color: #ffc93c;
+  color: #07689f;
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+.btn-add-data:active,
+.save:active,
+.filter-delete:active,
+.all:active,
+.active:active,
+.done:active{
+  outline: none;
+  text-decoration: none;
+  background-color: #f8b400;
+  border: solid 2px #f8b400;
+}
+
+.line-through {
+  text-decoration: line-through;
+
+}
+.check-btn{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  
+}
+.delete:hover,.edit:hover{
+ transform: scale(1);
+ color: #eebb4d;
+}
+.content{
+  color: #204051;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.content:hover{
+  color: #595238;
+}
+.add-input-text{
+  outline: none;
+}
