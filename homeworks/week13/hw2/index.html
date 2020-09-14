@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<script src="./main.js"></script>
+<script> 
+$(document).ready(() => {
+  // 初始化後先呼叫看有沒有問題
+  commentPlugin.init({
+    site_key: 'ruofan',
+    apiUrl: 'http://mentor-program.co/mtr04group2/Ruofan/wk12/%E7%95%99%E8%A8%80%E6%9D%BF',
+    containerSelector: '.comments-area',
+  });
+  commentPlugin.init({
+    site_key: 'ruofan2',
+    apiUrl: 'http://mentor-program.co/mtr04group2/Ruofan/wk12/%E7%95%99%E8%A8%80%E6%9D%BF',
+    containerSelector: '.comments-area2',
+  });
+});
+
+</script>
+</head>
+
+<body>
+  <nav class="navbar">
+    Comments Board
+  </nav>
+
+  <div class="container">
+    <div class="comments-area"></div>
+    <div class="comments-area2"></div>
+  </div>
+</body>
+
+</html>
