@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+
+/* color */
+$color-grey: #4b5d67;
+$color-dark-grey: #343C47;
+$color-black: black;
+$color-light-black: #343C47;
+$color-white: white;
+$color-blue-light: #c7e5ec;
+$color-yellow: #f3c623;
+$color-dark-yellow: #C4A243;
+$color-dark-green: #5f6769;
+$color-green: #99b898;
+$color-green-blue: #127681;
+$color-light-brown: #e8e8e8;
+$color-dark-brown: #4d3e3e;
+$color-brown: #838383;
+$color-perple: #87556f;
+
+/* font-size */
+$font-size-normal: 20px;
+$font-size-small: 18px;
+$font-size-big: 27px;
+
+/* @mixin */
+@mixin display-InlineBlock {
+  display: inline-block;
+}
+
+@mixin imgSize {
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 30px;
+  min-height: 700px;
+}
+
+@mixin text-decoration {
+  text-decoration: none;
+}
+
+@mixin section-style {
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+  overflow: auto;
+  padding: 30px;
+  margin-top: 70px;
+}
+
+@mixin word-style {
+  margin-left: 240px;
+  margin-right: 150px;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+@mixin font-weight {
+  font-weight: bold;
+}
+
+@mixin add-article-text {
+  margin-bottom: 20px;
+  font-size: $font-size-normal;
+  word-break: break-all;
+  overflow: auto;
+}
+
+@mixin box-shadow {
+  box-shadow: 1px 1px 3px $color-light-brown;
+}
+
+@mixin outline {
+  outline: none;
+}
+
+@mixin overflow {
+  word-break: break-all;
+  overflow: auto;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Cutive Mono', 'Nunito', sans-serif, 微軟正黑體;
+  /*border: solid 1px black;*/
+  color: $color-grey;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  top: 3%;
+  left: 0;
+  right: 0;
+
+  h1 {
+    @include display-InlineBlock;
+    margin: 0px 20px;
+    color: $color-black;
+  }
+
+  a {
+    padding: 20px;
+    @include display-InlineBlock;
+    @include text-decoration;
+    color: $color-white;
+  }
+
+}
+
+header {
+  .container {
+    background-image: url(https://i.imgur.com/Dwg82Uk.png);
+    @include imgSize;
+  }
+
+  .about_container {
+    background-image: url(img/3.png);
+    @include imgSize;
+  }
+
+  .admin_container {
+    background-image: url(img/1.png);
+    @include imgSize;
+  }
+
+  .add_container {
+    background-image: url(img/4.png);
+    @include imgSize;
+  }
+
+  .article_container {
+    background-image: url(https://i.imgur.com/Dwg82Uk.png);
+    @include imgSize;
+  }
+
+}
+
+
+
+.section {
+  @include section-style;
+  @include word-style;
+}
+
+.login_section {
+  @include section-style;
+  @include word-style;
+  text-align: center;
+}
+
+.about_section {
+  margin-left: 180px;
+  margin-right: 180px;
+  border: solid 1px $color-blue-light;
+  white-space: pre;
+  font-size: $font-size-normal;
+  line-height: 40px;
+  @include font-weight;
+  @include section-style;
+  text-align: center;
+
+  a {
+    position: relative;
+    top: 5px;
+    @include text-decoration;
+    color: $color-light-black;
+
+    &:hover {
+      border-bottom: solid 4px $color-yellow;
+    }
+  }
+
+}
+
+.button_container {
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  .active {
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $color-yellow;
+    }
+
+    .middle {
+      opacity: 0;
+      background: $color-dark-yellow;
+    }
+
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $color-dark-yellow;
+    }
+  }
+
+  span {
+    background: $color-dark-green;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background-color: $color-dark-grey;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  z-index: 10;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    @include display-InlineBlock;
+    position: relative;
+    height: 100%;
+
+    li {
+      display: block;
+      text-align: left;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+
+      a {
+        display: block;
+        position: relative;
+        color: $color-dark-yellow;
+        @include text-decoration;
+        overflow: hidden;
+
+        &:hover:after,
+        &:focus:after,
+        &:active:after {
+          width: 100%;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $color-dark-yellow;
+          transition: 0.35s;
+        }
+      }
+    }
+  }
+
+  .open {
+    height: 100%;
+
+    li {
+      animation: fadeInRight 0.5s ease forwards;
+      animation-delay: 0.35s;
+
+      &:nth-of-type(2) {
+        animation-delay: 0.4s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: 0.45s;
+      }
+
+      &:nth-of-type(4) {
+        animation-delay: 0.50s;
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.add_article {
+  &_title {
+    @include add-article-text;
+  }
+
+  &_content {
+    @include add-article-text;
+
+    textarea {
+      width: 900px;
+      height: 450px;
+      text-align: justify;
+      text-justify: inter-ideograph;
+      @include overflow;
+    }
+  }
+}
+
+input[type=text],
+textarea[type=text] {
+  font-weight: 700;
+  font-size: $font-size-normal;
+  color: $color-green;
+  font-weight: normal;
+  @include outline;
+  @include overflow;
+  background: transparent;
+  border: none;
+  width: 900px;
+
+}
+
+textarea[type=text] {
+  height: 450px;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  @include overflow;
+}
+
+select[type=text] {
+  font-size: $font-size-normal;
+  border: solid 2px $color-green-blue;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 35px;
+  color: $color-yellow;
+  @include font-weight;
+  @include outline;
+
+  &:hover {
+    font-size: $font-size-normal;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: $color-green-blue;
+    color: $color-yellow;
+    border: solid 1px $color-green-blue;
+    @include box-shadow;
+    @include font-weight;
+    @include outline;
+  }
+}
+
+input[type=submit] {
+  border-radius: 5px;
+  font-size: $font-size-small;
+  @include outline;
+  @include box-shadow;
+  background: transparent;
+  cursor: pointer;
+}
+
+.account,
+.password {
+  font-size: $font-size-big;
+  @include font-weight;
+  color: $color-green-blue;
+}
+
+input[type=username],
+input[type=password] {
+  background: none;
+  @include outline;
+  height: 40px;
+  border: solid 2px $color-green;
+  border-radius: 6px;
+  font-size: $font-size-normal;
+  color: $color-green-blue;
+}
+
+.login_submit,
+.add_category_submit {
+  border-radius: 5px;
+  font-size: 25px;
+  background: transparent;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: $color-yellow;
+  border: solid 2px $color-yellow;
+  color: $color-green-blue;
+  @include font-weight;
+  @include outline;
+  margin-top: 20px;
+
+  &.login_submit:hover,
+  .add_category_submit:hover {
+    background-color: $color-green-blue;
+    color: $color-yellow;
+    border: solid 1px $color-green-blue;
+    @include box-shadow;
+    @include font-weight;
+  }
+}
+
+.index {
+
+  &_update,
+  &_delete {
+    @include text-decoration;
+    @include font-weight;
+    color: $color-brown;
+
+    &:hover {
+      color: $color-green-blue;
+      border-bottom: solid 4px $color-yellow;
+    }
+  }
+
+  &_delete,
+  &_time {
+    margin-left: 20px;
+
+    &:hover {
+      color: $color-green-blue;
+      border-bottom: solid 4px $color-yellow;
+    }
+  }
+
+  &_title {
+    color: $color-green-blue;
+    font-weight: normal;
+  }
+
+  &_content {
+    margin-top: 40px;
+    font-size: $font-size-small;
+    @include font-weight;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    color: $color-green-blue;
+  }
+
+  &_more {
+    margin-top: 30px;
+
+    &:hover {
+      color: $color-green-blue;
+      border-bottom: solid 4px $color-yellow;
+    }
+  }
+}
+
+.article {
+  &_update {
+    margin-left: -113px;
+    @include font-weight;
+    @include text-decoration;
+  }
+
+  &_delete {
+    margin-left: 25px;
+    @include font-weight;
+    @include text-decoration;
+  }
+
+  a {
+    @include text-decoration;
+    color: $color-black;
+  }
+
+  &_title {
+    font-weight: normal;
+    color: $color-dark-brown;
+  }
+
+  &_content {
+    font-size: $font-size-small;
+    word-wrap: break-word;
+    overflow: auto;
+    margin-top: -20px;
+    color: $color-green;
+    font-weight: normal;
+  }
+
+  &_name {
+    font-size: 16px;
+  }
+}
+
+.add {
+  &_submit {
+    font-size: $font-size-normal;
+    border: solid 2px $color-green-blue;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    height: 35px;
+    color: $color-yellow;
+    @include font-weight;
+    @include outline;
+    width: 150px;
+    height: 40px;
+
+    &:hover {
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: $color-green-blue;
+      color: $color-yellow;
+      @include box-shadow;
+      @include outline;
+    }
+  }
+
+  &_nav {
+    top: 3%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_category_input {
+    background: none;
+    @include outline;
+    height: 40px;
+    border: solid 2px $color-green;
+    border-radius: 6px;
+    font-size: $font-size-normal;
+    color: $color-green-blue;
+  }
+
+  &_category_form {
+    text-align: center;
+  }
+}
+
+.admin {
+
+  &_add,
+  &_manage {
+    @include text-decoration;
+    color: $color-brown;
+
+    &:hover {
+      color: $color-green-blue;
+      border-bottom: solid 4px $color-yellow;
+    }
+  }
+
+  &_li {
+    list-style-type: circle;
+    line-height: 60px;
+    font-size: $font-size-normal;
+    color: $color-perple;
+    @include text-decoration;
+    @include font-weight;
+  }
+
+  &_update,
+  &_delete {
+    margin-left: 15px;
+    font-size: $font-size-small;
+    @include text-decoration;
+
+    &:hover {
+      color: $color-green-blue;
+      border-bottom: solid 4px $color-yellow;
+    }
+  }
+}

@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:600,700&display=swap');
+
+
+* {
+
+  list-style: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 10pt;
+  /*border: solid 1px white;*/
+  /*box-sizing: border-box;*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #092532;
+
+}
+
+.top {
+  background-color: #faf4ff;
+  height: 36px;
+  display: flex;
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+  position: fixed;
+  z-index: 10;
+  min-width: 100%;
+
+}
+.totop a{
+  text-decoration:none;
+  color: #ffc93c;
+  padding: 10px;
+  margin-left: 5px;
+
+}
+.totop a:hover{
+opacity: 0.7;
+}
+.totop i{
+  color: #ffc93c;
+  margin-left: 15px;
+  padding-top: 10px;
+  animation: slow-up 4s infinite;
+}
+
+@keyframes slow-up {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY( 8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.twitch-logo {
+
+  margin: 2px;
+  width: 52px;
+  cursor: pointer;
+}
+
+
+ul {
+  padding: 0;
+}
+
+ul a {
+  display: inline-block;
+  text-decoration: none;
+  color: #666;
+}
+
+.menu {
+  max-width: 300px;
+  margin: 0 auto;
+  list-style-type: none;
+  cursor: pointer;
+
+}
+
+.drop-down {
+  position: relative;
+}
+
+
+.submenu {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  z-index: 8;
+  transition: opacity 0.5s ease;
+}
+
+.submenu-item {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.drop-down:hover .submenu {
+  opacity: 1;
+}
+
+.drop-down:hover .submenu-item {
+  overflow: visible;
+  height: 30px;
+}
+
+.item {
+  position: relative;
+  margin-bottom: -3px;
+  width: 100%;
+  padding: 4px;
+  top: -3px;
+  text-align: center;
+  height: 30px;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-name: item;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item i{
+  margin-left: 15px;
+  animation: slow-down 4s infinite;
+}
+
+@keyframes slow-down {
+  0% {
+    transform: translateY(-3px);
+  }
+
+  50% {
+    transform: translateY( 3px);
+  }
+
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes item {
+  0% {
+
+    color: #424874;
+  }
+
+  25% {
+
+    color: #ed6663;
+  }
+
+  50% {
+
+    color: #527318;
+  }
+
+  75% {
+
+    color: #ffa41b;
+  }
+
+  100% {
+
+    color: #50d890;
+  }
+}
+
+.item:hover {
+  background-color: #f4eeff;
+
+}
+
+.submenu-item {
+  position: relative;
+  background: #f4eeff;
+  color: #527318;
+  width: 100%;
+  padding: 4px;
+  line-height: 30px;
+  text-align: center;
+
+}
+
+.submenu-item:hover {
+  background: #dcd6f7;
+  color: #400082;
+
+}
+
+.submenu-item:active {
+  background: #006a71;
+  color: #d3de32;
+
+}
+
+.more-games {
+  position: relative;
+  margin-bottom: -3px;
+  width: 100%;
+  padding: 4px;
+  top: -3px;
+  text-align: center;
+  height: 31px;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-name: item;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+
+}
+
+.more-games:hover {
+  background: #dcd6f7;
+  color: #400082;
+}
+
+.more-games:active {
+  background: #006a71;
+  color: #d3de32;
+  animation: none;
+
+}
+
+.show-game {
+  background-image: linear-gradient(to bottom, rgba(7, 17, 27, 0.6), rgba(7, 17, 27, 0.5)), url("https://i.imgur.com/dybzI5W.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 200px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.show-game i {
+  font-size: 30px;
+  color: #ff9a76;
+  margin-top: 40px;
+  animation: double-down 4s infinite;
+  cursor: pointer;
+}
+
+.show-game i:hover{
+  opacity: 0.5;
+}
+
+@keyframes double-down {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.show-game img {
+  margin-bottom: 40px;
+}
+
+.game-title {
+
+  font-size: 24px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.game-title:hover {
+  color: #76ead7;
+
+}
+
+.content {
+  background-size: cover;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #092532;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+.box {
+  width: 330px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 50px 15px 15px 15px;
+  display: inline-block;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden
+}
+
+.picture {
+  background-size: cover;
+  height: 195px;
+  overflow: hidden;
+  background-size: cover;
+  border-radius: 5px 5px 0px 0px;
+  transition: 0.5s
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.picture:hover {
+  transform: scale(1.13);
+  filter: brightness(1.1);
+}
+
+.bottom {
+  height: 90px;
+  display: flex;
+  position: relative;
+  border-radius: 0px 0px 5px 5px;
+  background: #f7f7f7;
+
+}
+
+
+.gamer {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-size: cover;
+
+}
+
+.gamer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.name {
+  font-size: 25px;
+  width: 270px;
+  height: 83px;
+  margin-left: 70px;
+  color: #2c003e;
+
+
+
+}
+
+.name h3 {
+  position: relative;
+  font-size: 15px;
+  top: -9px;
+  font-weight: normal;
+  padding: 0px 5px;
+  height: 60%;
+  text-align: justify;
+  /*讓文字水平左右對*/
+  overflow: auto;
+  /*文字超出的話，有滾軸可以用*/
+  border-bottom: dashed 1px #e4e3e3;
+  word-wrap: break-word;
+  /*超過畫面的寬度，則將單字換行*/
+
+}
+
+.name h3:hover {
+  color: #99b898;
+}
+
+.name p {
+  position: relative;
+  top: -20px;
+  padding: 0px 5px;
+  font-weight: bold;
+  height: 40%;
+}
+
+.name p:hover {
+  color: #c7b198;
+}
+
+.stream-empty {
+  width: 330px;
+  margin: 50px 15px 0px 15px;
+}
+
+@media(max-width: 500px) {
+.show-game img{
+  width: 450px;  
+}
+
+}
+@media(max-width: 414px) {
+.show-game img{
+  width: 380px;  
+}
+
+}
+@media(max-width: 375px) {
+.show-game img{
+  width: 350px;  
+}
+.show-game {
+  padding: 100px;
+}
+
+}
+@media(max-width: 320px) {
+.show-game img{
+  width: 300px;  
+}
+
+}
