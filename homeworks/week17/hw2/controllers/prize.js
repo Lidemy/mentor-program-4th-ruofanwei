@@ -133,15 +133,15 @@ getPrize: (req, res) => {
      }
 
 const random = Math.floor(Math.random() * 100); 
-console.log("random:", random)
+
 let concatWeightArr = weights.concat(random);    //將隨機數加入權重陣列
-console.log("concatWeightArr:", concatWeightArr)
+
 let sortedWeightArr = concatWeightArr.sort(function(a, b){return a-b;});    //將包含隨機數的新權重陣列按從小到大（升序）排序
-console.log("sortedWeightArr:", sortedWeightArr)
+
 let randomIndex = sortedWeightArr.indexOf(random);    //索引隨機數在新權重陣列中的位置
-console.log("randomIndex:", randomIndex)
+
 randomIndex = Math.min(randomIndex, prizes.length+1);    //權重隨機數的下標不得超過獎項陣列的長度-1，重新計算隨機數在獎項陣列中的索引位置                
-console.log("randomIndex:", randomIndex)
+
 
 let result = {};
   Prize.findOne({
@@ -149,7 +149,7 @@ let result = {};
           id: randomIndex,
         },
       }).then((prize) => {
-        console.log(prize.name, prize.weight);
+  
           result = {
             name: prize.name,
             content: prize.content,
