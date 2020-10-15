@@ -1,0 +1,33 @@
+
+<!doctype html>
+
+<head>
+    <%- include('template/head') %>
+</head>
+<html>
+
+<%- include('template/navbar') %>
+<div class="container">
+
+    <% if (errorMessage && errorMessage.length > 0){ %>
+    <div class="alert alert-dismissible alert-warning mt-2">
+        <h5 class="alert-heading mt-2"><%= errorMessage %></h5>
+    </div>
+    <% } %>
+    <form method="POST" action="/update_articles/<%= article.id %>">
+        <div class="form-group">
+            <h6 class="text-muted mt-4">Title:</h6>
+            <input type="text" name="title" class="form-control" value="<%= article.title %>"/>
+        </div>
+        <div class="form-group mt-4">
+            <h6 class="text-muted">Article:</h6>
+            <textarea class="form-control mt-4 border-light mb-3 update-article" name="content" id="exampleTextarea" rows="3"><%- article.content %></textarea>
+        </div>
+        <button type="submit" class="btn btn-info mb-5">Update</button>
+
+    </form>
+
+
+</div>
+
+</html>

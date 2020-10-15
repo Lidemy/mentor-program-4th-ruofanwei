@@ -1,0 +1,34 @@
+{
+  "name": "express-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "ckeditor4": "^4.15.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "marked": "^0.6.3",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "sequelize-auto": "^0.6.3",
+    "sequelize-cli": "^6.2.0",
+    "sequelize-date-no-tz-postgres": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "migrate": "npx sequelize-cli db:migrate",
+    "start": "npm run migrate && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "",
+  "license": "ISC"
+}

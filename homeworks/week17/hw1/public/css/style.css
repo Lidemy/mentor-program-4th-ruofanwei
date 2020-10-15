@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+*{
+  
+  font-family: 'Cutive Mono', 'Nunito', sans-serif, 微軟正黑體;
+  /*border: solid 1px black;*/
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(img/1.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left center;
+  
+}
+.index-content{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container{
+  min-height: 650px;
+}
+.card{
+  background-color:rgba(255,255,255,0.88); 
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+.navbar{
+  position: sticky;/*讓navbar滑動時，固定在頁面上方*/
+  z-index: 10;/*讓navbar顯示在最前面，滑動時不會圖片被蓋掉*/
+  min-width: 100%;/*讓navbar的寬度可以等於頁面寬度*/
+  margin: 0;
+  top:0;
+
+}
+.navbar-brand{
+  margin-bottom: 8px;
+}
+.complete-card{
+  min-height: 550px;
+}
+.about-card{
+  text-align:center;
+}
+.card-text{
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+.post-article,.update-article{
+  min-height: 500px;
+}
+.complete-content{
+  word-break: break-word; /* 顯示的資料在框框中會自動換行 */
+  white-space: pre-line; /* 輸入資料有換行時，顯示的資料也要換行 */
+}
+.index-title{
+  letter-spacing: 4px;
+  
+}
+.login-input{
+  height: 65px;
+  width: 450px;
+  display: inline-block;  /* 置中 */
+  vertical-align: middle; /* 置中 */
+
+}
+.login-form{
+  margin-top: 40px;
+}
+.register-form{
+  margin-top: 20px;
+}
+.login-form,.login-message,.register-form{
+  text-align: center;
+}
+.login-submit{
+  width: 450px;
+  height: 55px;
+}
