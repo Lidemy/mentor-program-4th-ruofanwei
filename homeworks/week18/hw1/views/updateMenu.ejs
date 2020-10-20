@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+    <%- include('template/head') %>
+    
+</head>
+<html>
+
+<%- include('template/navbar') %>
+<div class="container mt-5">
+<div class="card border-light mb-3 mt-5 complete-card">
+<% if (errorMessage && errorMessage.length > 0){ %>
+<div class="alert alert-dismissible alert-warning mt-2 update-errorMessage">
+    <h5 class="alert-heading mt-2"><%= errorMessage %></h5>
+</div>
+<% } %>
+<form method="POST" action="/update_menu/<%= menu.id %>" class="update-form">
+    <div class="form-group mt-3 midd">
+        <h6 class="text-muted ">品項:</h6>
+        <input type="text" name="name" class=" form-control update-input border-primary" placeholder="請輸入獎項" value="<%= menu.name %>">
+    </div>
+    <div class="form-group mt-2">
+        <h6 class="text-muted ">價格:</h6>
+        <input type="text" name="price" class=" form-control update-input border-primary" placeholder="請輸入獎項內容" value="<%= menu.price %>">
+    </div>
+    <div class="form-group mt-2">
+        <h6 class="text-muted ">圖片網址:</h6>
+        <input type="text" name="img" class=" form-control update-input border-primary" placeholder="請輸入圖片網址" value="<%= menu.img %>">
+    </div>
+    
+    <button type="submit" class="btn btn-info mt-1 login-submit">更新</button>
+</form>
+</div>
+
+
+
+</div>
+
+</html>

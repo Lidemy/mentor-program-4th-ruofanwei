@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+    <%- include('template/head') %>
+    
+</head>
+<html>
+
+<%- include('template/navbar') %>
+<div class="container mt-5">
+    
+<% if(username) { %>
+<div class="card  mb-3 mt-1 index-card">
+<div class="choose">
+<div ><a href="/backstage"><i class="fas fa-gifts"></i><h4>抽獎管理</h4></a></div>
+<div><a href="/manageMenu"><i class="far fa-list-alt"></i><h4>菜單管理</h4></a></div>
+<div><a href="/manageFaq"><i class="fas fa-pen-fancy"></i><h4>問題管理</h4></a></div>
+</div>
+</div>
+<% } %>
+
+</div>
+</html>

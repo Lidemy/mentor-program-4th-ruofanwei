@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+    <%- include('template/faq-head') %>
+    
+</head>
+<html>
+
+<%- include('template/restaurant-navbar') %>
+ <div class="container">
+        <h2 class="faqTitle">
+            FAQ - 常見問題
+        </h2>
+ <% faqs.forEach(faq => { %>
+        <div class="faq">
+         
+
+            <div class="dropDown dropDown-hide">
+                <div class='problem'>
+                    Q<%= `${faq.num}` %>:
+                </div>
+                <div class="content">
+                    <h2><%= `${faq.question}` %></h2>
+                    <p><%= `${faq.answer}` %></p>
+                </div>
+
+            </div>
+
+                   
+
+        </div>
+         <% }) %>
+    </div>
+<%- include('template/footer') %>
+
+</html>

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+*{
+  
+  font-family: 'Cutive Mono', 'Nunito', sans-serif, 微軟正黑體;
+  /*border: solid 1px black;*/
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(img/1.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left center;
+  
+}
+.index-content{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.faq-content{
+  word-break: break-all;
+  white-space: pre;
+}
+.container{
+  min-height: 650px;
+}
+.card{
+  background-color:rgba(255,255,255,0.6); 
+  box-shadow: 1px 1px 3px #e8e8e8;
+
+}
+.navbar{
+  position: sticky;/*讓navbar滑動時，固定在頁面上方*/
+  z-index: 10;/*讓navbar顯示在最前面，滑動時不會圖片被蓋掉*/
+  min-width: 100%;/*讓navbar的寬度可以等於頁面寬度*/
+  margin: 0;
+  top:0;
+  height: 60px;
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+}
+
+.complete-card{
+  min-height: 550px;
+}
+.index-card{
+  min-height: 650px;
+}
+.about-card{
+  text-align:center;
+}
+.card-text{
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+.post-article,.update-article{
+  min-height: 500px;
+}
+.complete-content{
+  word-break: break-word; /* 顯示的資料在框框中會自動換行 */
+  white-space: pre-line; /* 輸入資料有換行時，顯示的資料也要換行 */
+}
+.index-title{
+  letter-spacing: 4px;
+  
+}
+.login-input,.update-input{
+  height: 65px;
+  width: 450px;
+  display: inline-block;  /* 置中 */
+  vertical-align: middle; /* 置中 */
+
+}
+.updateFaq-input{
+height: 65px;
+width: 750px;
+display: inline-block;  /* 置中 */
+vertical-align: middle; /* 置中 */
+}
+.updateFaq-textarea{
+height: 500px;
+width: 750px;
+display: inline-block;  /* 置中 */
+vertical-align: middle; /* 置中 */
+border-radius: 5px;
+color: #686d76;
+border-color: #cdc9c3;
+padding: 10px;
+outline: none;
+}
+.textareaFaq{
+  height: 500px;
+  color: #686d76;
+  border-radius: 5px;
+  width: 100%;
+  border-color: #cdc9c3;
+  padding: 10px;
+  outline: none;
+}
+.login-form{
+  margin-top: 40px;
+}
+.register-form{
+  margin-top: 20px;
+}
+.login-form,.login-message,.register-form,.update-form,.update-errorMessage{
+  text-align: center;
+}
+.login-submit{
+  width: 450px;
+  height: 55px;
+}
+.updateFaq-submit{
+  width: 750px;
+  height: 55px;
+  margin-bottom: 30px;
+}
+.text-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #5ec1b6;
+
+}
+
+.text {
+  display: flex;
+  padding: 30px 0px;
+  border-bottom: dashed 1px #e4e3e3;
+}
+.question {
+  width: 20%;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #5e6f64;
+
+}
+
+.answer {
+  word-wrap: break-word;
+  width: 100%;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #5e6f64;
+}
+
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  min-height: 650px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  padding: 40px 30px;
+
+}
+.surprise {
+  border-radius: 10px;
+  background: #ffd31d;
+  color: #58b4ae;
+  border: solid 1px #ffd31d;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 50px;
+  outline: none;
+  
+}
+
+.surprise:active {
+  color: #fcf8f3;
+  border: solid 1px #74d4c0;
+  background: #74d4c0;
+  font-weight: bold;
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+li {
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+.again{
+  width: 40%;
+  height: 40%;
+  text-align:center;
+  border-radius: 6px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+}
+.reload{
+  margin-top: 20px;
+  width: 45%;
+  height: 20%;
+}
+.choose{
+  display: flex;
+  padding: 30px;
+  margin: auto;
+  justify-content: space-around;
+  text-align:center; 
+  max-width: 900px;
+  width: 100%;
+}
+.choose i{
+  font-size: 120px;
+  margin-bottom: 20px;
+ color: #07689f;
+
+}
+.choose i:hover{
+  color:#a37eba;
+}
+.choose h4{
+  color: #56556e;
+}
+.choose h4:hover{
+  color: #a35d6a;
+}
+.choose a{
+  text-decoration:none;
+  }
