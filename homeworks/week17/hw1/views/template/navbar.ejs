@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Ruofan's Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+
+            <% if(username) { %>
+       
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/article">Post</a>
+        </li>
+            <li>
+                <a class="nav-link" href="/about">About Me</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">Homeworks <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu" style="">
+                    <a class="dropdown-item" href="http://ruofan.tw/todo/index.html">todo list</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/comment/index.php">comment board</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/twitch/twitch.html">twitch top games</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/restaurant/index.html">restaurant</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/form/index.html">Application form</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/hackernews/hackernews.html">hackernews</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/plugin/index.html">webpack plugin</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/note">Notes</a>
+                </div>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+ 
+        
+            <% }else{ %>
+            
+            <li>
+                <a class="nav-link" href="/about">About Me</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">Homeworks <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu" style="">
+                    <a class="dropdown-item" href="http://ruofan.tw/todo/index.html">todo list</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/comment/index.php">comment board</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/twitch/twitch.html">twitch top games</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/restaurant/index.html">restaurant</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/form/index.html">Application form</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/hackernews/hackernews.html">hackernews</a>
+                    <a class="dropdown-item" href="http://ruofan.tw/plugin/index.html">webpack plugin</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/note">Notes</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            
+            
+            <%}%>
+        </ul>
+       
+    </div>
+</nav>

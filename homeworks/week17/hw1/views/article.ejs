@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+    <%- include('template/head') %>
+</head>
+
+<html>
+
+<%- include('template/navbar') %>
+<div class="container">
+<% if(username) { %>
+
+<form method="POST" action="/article">
+    <div class="form-group">
+        <h6 class="text-muted mt-4">Title:</h6>
+        <input type="text" name="title" class="form-control" placeholder="Add title...">
+    </div>
+    <div class="form-group mt-4">
+     <h6 class="text-muted">Article:</h6> <textarea class="form-control mt-4 border-light mb-3 post-article" name="content" rows="3" placeholder="Add article..."></textarea>
+    </div>
+<button type="submit" class="btn btn-info mb-5">Send</button>
+</form>
+<% } %>
+
+
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+    <%- include('template/head') %>
+    
+</head>
+<html>
+
+<%- include('template/navbar') %>
+<div class="container mt-5">
+
+
+<% articles.forEach(function(article){ %>
+<div class="card border-light mb-5">
+    <div class="card-body">
+        <h2 class="card-title text-primary index-title">  <%= article.title %></h2> <p><%= article.createdAt %></p>
+        <h6 class="card-text text-muted index-content"><%= article.content %></h6>
+        <a href="/more_content/<%= article.id %>" class="card-link text-warning">read more</a>
+        <% if(username === article.User.username){ %>
+        <div class="mt-4">
+        <a href="/update_articles/<%= article.id %>" class="card-link text-info">update</a>
+        <a href="/delete_articles/<%= article.id %>" class="card-link text-info">delete</a>
+        </div>
+        <% } %>
+    </div>
+</div>
+<% }) %>
+</html>
