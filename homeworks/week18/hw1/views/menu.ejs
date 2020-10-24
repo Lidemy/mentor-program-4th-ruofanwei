@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+    <%- include('template/restaurant-head') %>
+    
+</head>
+<html>
+
+<%- include('template/restaurant-navbar') %>
+<section class="banner">
+
+    </section>
+
+    <div class="wrapper">
+       
+
+        <section class="menu">
+            <h2 class="title">
+                熱銷搶購中
+            </h2>
+            <div class="images">
+
+                <div><img src="https://i.imgur.com/vONoBeF.png" /><p>售完</p></div>
+                <div><img src="https://i.imgur.com/zlZFqHx.jpg" /><p>售完</p></div>
+                <div><img src="https://i.imgur.com/4Z985JR.jpg" /><p>售完</p></div>
+                
+
+            </div>
+        </section>
+        <section class="slogan">
+           <div class="slogan-img"><img src="https://i.imgur.com/snR9FMN.png" /></div>
+           <div class="slogan-des"> 
+            <h2 class="slogan-h2">在家也能輕鬆
+咬一口我們的鮮甜清爽</h2>
+            <p class="slogan-p">您再也不必受限於時間或地點，隨時隨地透過我們24小時的線上購物選購，咬一口廚房堅持以細選食材、輕盈口感，呈現食材本身的原滋原味。</p> 
+            <p>我們將咬一口的經典菜色研發製成相應當季的包裝食品及各式精美的伴手禮盒。將剛出爐的新鮮迅速送達家人手中，也適合與更多喜愛咬一口的親朋好友分享難得的健康滋味。</p> 
+           </div>
+        </section>
+
+        <section class="list">
+            <div class="list-top"> 
+               <h3 class="list-title">
+                    立 即 輕 鬆 選 購
+                </h3>
+                <i class="fas fa-angle-double-down"></i>
+              </div>
+                
+              <div class="list-photo"> 
+                <% menus.forEach(menu => { %>
+                <div class="list-photo-1"> 
+                 <div><img src="<%= `${menu.img}` %>" /></div>
+                 <h5 class="list-h4"><%= `${menu.name}|$${menu.price}` %></h5>
+                 <button class="list-button">加入購物車</button>
+              </div>
+                <% }) %>
+              </div>
+              <div id="cart" class="cart"><i class="ship fas fa-shopping-basket"></i></div>
+            </section>
+    
+
+        <div class="wrapper">
+            <section class="map">
+              <div class="map-top"> 
+                <h3 class="list-title">
+                    還 是 想 要 親 身 體 會 我 們 的 服 務 ？
+
+                </h3>
+                <i class="fas fa-angle-double-down"></i>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57840.18805162603!2d121.52986417910155!3d25.03367519999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6e9d93249%3A0xd508f7b3aa02d931!2z5Y-w5YyXMTAx6KeA5pmv5Y-w!5e0!3m2!1szh-TW!2stw!4v1594465650664!5m2!1szh-TW!2stw"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </section>
+        </div>
+    </div>
+<%- include('template/footer') %>
+
+</html>
