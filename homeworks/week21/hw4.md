@@ -14,3 +14,4 @@ react每個 Component 裡面都有自己的元素、樣式和邏輯，並且可�
 state 和 props 改變時都會觸發更新渲染。
 props 就像參數一樣，在渲染時傳入 component，再經由不同 props 回傳所需資料。  
 state 儲存了資料，component 執行後讀取 state 內的資料渲染出畫面。
+
