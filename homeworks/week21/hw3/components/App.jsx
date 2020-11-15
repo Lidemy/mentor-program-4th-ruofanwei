@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable import/no-unresolved */
 import styled from 'styled-components';
 import React from 'react';
@@ -45,8 +46,7 @@ function App() {
           <H4>活動日期：2020/12/10 ~ 2020/12/11</H4>
           <H4>活動地點：台北市大安區新生南路二段1號</H4>
           <H5>
-            <Span>*</Span>
-必填
+            <Span>*</Span>必填
           </H5>
         </Header>
       </Top>

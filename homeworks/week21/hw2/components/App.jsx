@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable import/no-duplicates */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
@@ -116,17 +117,7 @@ const Title = ({ blackOrWhite, winner }) => (
     {winner && (
     <Win>
       <Text>
-        {' '}
-🎉
-        <Span>Con</Span>
-gratu
-        <Span>lati</Span>
-ons !
-        <Span>Winn</Span>
-er is
-        {winner}
-        {' '}
-🎉
+      🎉<Span>Con</Span>gratu<Span>lati</Span>ons !<Span>Winn</Span>er is {winner} 🎉
       </Text>
       <Button
         onClick={() => {
@@ -138,10 +129,7 @@ er is
 
     </Win>
     )}
-    <H3>
-Next is 🤞
-      {blackOrWhite}
-    </H3>
+    <H3>Next is 🤞{blackOrWhite} </H3>
   </div>
 );
 
