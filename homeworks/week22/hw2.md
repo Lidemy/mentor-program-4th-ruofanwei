@@ -1,24 +1,24 @@
 ## 請列出 React 內建的所有 hook，並大概講解功能是什麼
 
 #### useState
-會在每次重新轉譯的時候保留這個 state。
-useState 函式會回傳兩個東西，分別是「當前的 state（current state）」和一個可以「更新此 state 的方法」
-這個方法所帶入的參數就是「state 的預設值（initial state）」，只有在元件初次轉譯時會使用到它。
+* 會在每次重新轉譯的時候保留這個 state。
+* useState 函式會回傳兩個東西，分別是「當前的 state（current state）」和一個可以「更新此 state 的方法」
+* 這個方法所帶入的參數就是「state 的預設值（initial state）」，只有在元件初次轉譯時會使用到它。
 
 #### useEffect
-useEffect 內的 effect 會在每一次 DOM 轉譯後被呼叫
-如果有回傳 cleanup function 的話，則會在每一次 DOM 轉譯後的最開始先被呼叫，接著才執行該次的 effect
-實際上在每一次元件轉譯時 useEffect 內的函式都是新的、不同的，並會把舊的給覆蓋
+* useEffect 內的 effect 會在每一次 DOM 轉譯後被呼叫
+* 如果有回傳 cleanup function 的話，則會在每一次 DOM 轉譯後的最開始先被呼叫，接著才執行該次的 effect
+* 實際上在每一次元件轉譯時 useEffect 內的函式都是新的、不同的，並會把舊的給覆蓋
 
 #### useContext
-Component 不再需要經過一層一層的 Props 傳遞，便能直接使用在需要它的 Component。
-讓父 Component 能好好管理要提供的 Props，也讓子 Component 能更輕易地獲取 Props
+* Component 不再需要經過一層一層的 Props 傳遞，便能直接使用在需要它的 Component。
+* 讓父 Component 能好好管理要提供的 Props，也讓子 Component 能更輕易地獲取 Props
 
 #### useReducer
-需要將定義好的 reducer 和 initialState 帶入
-使用時機是「當你需要更新一個資料，但這個資料其實是相依於另一個資料狀態時」
-可以不再需要在 useEffect 內去讀取狀態，只需要在 effect 內去 dispatch 一個 action 來更新 state
-effect 不再需要更新狀態，只需要說明發生了什麼，更新的邏輯則都在 reducer 內統一處理。
+* 需要將定義好的 reducer 和 initialState 帶入
+* 使用時機是「當你需要更新一個資料，但這個資料其實是相依於另一個資料狀態時」
+* 可以不再需要在 useEffect 內去讀取狀態，只需要在 effect 內去 dispatch 一個 action 來更新 state
+* effect 不再需要更新狀態，只需要說明發生了什麼，更新的邏輯則都在 reducer 內統一處理。
 
 #### useCallback
 能夠記住 Object 的記憶體位址，就可以避免父元件重新渲染後，Object 被重新分配記憶體位址
@@ -27,9 +27,9 @@ effect 不再需要更新狀態，只需要說明發生了什麼，更新的邏�
 讓 React 記住 function 的回傳值，如果 dependencies array 中的變數都沒有被經過修改，React.useMemo 將會沿用上次的回傳值。
 
 #### useRef
-建立並回傳一個帶有 current 屬性的物件
-即使在組建重新渲染後，仍可以去取得同一個物件，並取出內部的值來用。
-想要定義一些「變數」，但當這些變數改變時，又不需要像 state 一樣會重新導致畫面渲染的話，適合使用 useRef。
+* 建立並回傳一個帶有 current 屬性的物件
+* 即使在組建重新渲染後，仍可以去取得同一個物件，並取出內部的值來用。
+* 想要定義一些「變數」，但當這些變數改變時，又不需要像 state 一樣會重新導致畫面渲染的話，適合使用 useRef。
 
 [參考資料](https://ithelp.ithome.com.tw/articles/10219658)
 [參考資料](https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/react-optimize-performance-using-memo-usecallback-usememo-a76b6b272df3)
@@ -38,9 +38,9 @@ effect 不再需要更新狀態，只需要說明發生了什麼，更新的邏�
 
 ![](https://i.imgur.com/gDNOsfg.png)
 可以分為三個階段：
-Mounting 當元件被加入到 DOM 中時會觸發
-Updateing 當元件的 props 或 state 更新，重新渲染 (re-rendered) DOM 時會觸發
-Unmounting 當元件要從 DOM 中被移除時會觸發
+* Mounting 當元件被加入到 DOM 中時會觸發
+* Updateing 當元件的 props 或 state 更新，重新渲染 (re-rendered) DOM 時會觸發
+* Unmounting 當元件要從 DOM 中被移除時會觸發
 
 #### Mounting
 ##### constructor
@@ -56,15 +56,15 @@ Unmounting 當元件要從 DOM 中被移除時會觸發
 會在第一次的 render() 執行之前就先被執行
 
 ##### componentDidMount
-元件已經實際存在在畫面中，
-任何需要 DOM 或會 Asynchronous 更新 state 狀態的操作都適合放在 componentDidMount。
+* 元件已經實際存在在畫面中
+* 任何需要 DOM 或會 Asynchronous 更新 state 狀態的操作都適合放在 componentDidMount。
 
 #### Updateing
 
 ##### componentWillReceiveProps
-會在每次元件接收到 props 更新時被執行
-當父元件刷新子元件時也會執行
-元件第一次 render() 時，React 不會 call componentWillReceiveProps
+* 會在每次元件接收到 props 更新時被執行
+* 當父元件刷新子元件時也會執行
+* 元件第一次 render() 時，React 不會 call componentWillReceiveProps
 
 ##### shouldComponentUpdate
 想最佳化效能時使用
@@ -81,29 +81,29 @@ React 進行修改前，通常是更新 DOM 前被呼叫執行
 #### Unmounting
 
 ##### componentWillUnmount
-component 要被移除的時候會執行此函式，可以做清除綁定 eventlistener，或清除 cookie、local storage等機制
-在這裏執行 setState 不會觸發 re-render 
+* component 要被移除的時候會執行此函式，可以做清除綁定 eventlistener，或清除 cookie、local storage等機制
+* 在這裏執行 setState 不會觸發 re-render 
 
 #### 當元件第一次 render 時的順序：
 
-constructor
-componentWillMount, getDerivedStateFromProps
-render
-componentDidMount
+1. constructor
+2. componentWillMount, getDerivedStateFromProps
+3. render
+4. componentDidMount
 
 #### 當元件被更新時的順序：
 
-componentWillReceiveProps, getDerivedStateFromProps
-shouldComponentUpdate 
-componentWillUpdate
-render
-getSnapshotBeforeUpdate
-componentDidUpdate
+1. componentWillReceiveProps, getDerivedStateFromProps
+2. shouldComponentUpdate 
+3. componentWillUpdate
+4. render
+5. getSnapshotBeforeUpdate
+6. componentDidUpdate
 
 
 ## 請問 class component 與 function component 的差別是什麼？
-Function component 的每一次 render，都是「重新」呼叫一次 function，會記住當下傳入的值
-class component 可以從 this.props.onChange 拿到最新的屬性
+* Function component 的每一次 render，都是「重新」呼叫一次 function，會記住當下傳入的值
+* class component 可以從 this.props.onChange 拿到最新的屬性
 
 [參考資料](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/)
 
