@@ -2,8 +2,8 @@
 * 可以清楚的知道狀態為何被更新而且如何被更新
 * 更有效地[管理/更新]全域 state 的狀態
 
-[參考資料](https://ithelp.ithome.com.tw/articles/10187498)
-
+>[參考資料](https://ithelp.ithome.com.tw/articles/10187498)
+---
 ## Redux 是什麼？可以簡介一下 Redux 的各個元件跟資料流嗎？
 ![](https://i.imgur.com/lVmrYz7.gif)
 
@@ -28,7 +28,9 @@ store.dispatch 可以視為是觸發一個事件，透過這個方式讓 store �
 * payload 欄位用來提供額外的資訊可以被操作
 ### Action Creators
 用來回傳一個 action 物件，並且可以額外提供參數傳入。
-[參考資料](https://ithelp.ithome.com.tw/articles/10250232)
+
+>[參考資料](https://ithelp.ithome.com.tw/articles/10250232)
+
 ### Redux 同步資料流
 ![](https://i.imgur.com/pzOFgKF.png)
 View -> Action -> (Middleware) -> Reducer
@@ -36,11 +38,16 @@ View -> Action -> (Middleware) -> Reducer
 * 若有使用 Middleware 的話會在進入 Reducer 進行一些處理
 * 當 Action 進到 Reducer 時，Reducer 會根據，action type 去 mapping 對應處理的動作，然後回傳回新的 state
 * View 則因為偵測到 state 更新而重繪頁面
-[參考資料](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-introduction.md)
+
+>[參考資料](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-introduction.md)
+
 ### Redux 非同步資料流
 ![](https://i.imgur.com/i2zwyBz.png)
-使用者與 View 互動 => dispatch 出 Action => Reducers 依據 action type 分配到對應處理方式，回傳新的 state => 透過 React Redux 傳送給 React，React 重新繪製 View
-[參考資料](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-real-world-example.md)
+>使用者與 View 互動 => dispatch 出 Action => Reducers 依據 action type 分配到對應處理方式，回傳新的 state => 透過 React Redux 傳送給 React，React 重新繪製 View
+
+>[參考資料](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-real-world-example.md)
+
+---
 ## 該怎麼把 React 跟 Redux 串起來？
 ![](https://i.imgur.com/ZBCdQq4.jpg)
 * react-redux 是 React 和 Redux 間的橋樑，使用 Provider、connect 去連結 store 和 React View。
