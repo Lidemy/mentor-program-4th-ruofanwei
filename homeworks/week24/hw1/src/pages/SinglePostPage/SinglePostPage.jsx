@@ -144,6 +144,7 @@ export default function SinglePostPage() {
   const history = useHistory();
   const isLoading = useSelector(store => store.posts.isLoadingPost);
   const post = useSelector(store => store.posts.post);
+  const author = useSelector(store => store.posts.author);
   const user = useSelector(store => store.user.userData);
   useEffect(() => {
     dispatch(getPost(id));
@@ -167,7 +168,7 @@ export default function SinglePostPage() {
               <CreateInfo>
                 <PostUser>
                    Created from
-                  {user && user.username}
+                  {post && author.nickname}
                 </PostUser>
                 <PostDate>
                    at

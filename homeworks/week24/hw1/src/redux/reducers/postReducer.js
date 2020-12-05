@@ -18,6 +18,7 @@ export const postReducer = createSlice({
   initialState: {
     isLoadingPost: false,
     post: null,
+    author: null,
     errorMessage: null,
     newPostResponse: null,
     posts: [],
@@ -39,6 +40,9 @@ export const postReducer = createSlice({
     setPosts: (state, action) => {
       state.posts = action.payload;
     },
+    setAuthor: (state, action) => {
+      state.author = action.payload;
+    },
     setPaginate: (state, action) => {
       state.paginate = action.payload;
     },
@@ -46,7 +50,13 @@ export const postReducer = createSlice({
 });
 
 export const {
-  setIsLoadingPost, setPost, setNewPostResponse, setErrorMessage, setPosts, setPaginate,
+  setIsLoadingPost,
+  setPost,
+  setNewPostResponse,
+  setErrorMessage,
+  setPosts,
+  setAuthor,
+  setPaginate,
 } = postReducer.actions;
 
 
@@ -54,6 +64,7 @@ export const getPost = id => (dispatch) => {
   dispatch(setIsLoadingPost(true));
   return getSinglePost(id).then((post) => {
     dispatch(setPost(post[0]));
+    dispatch(setAuthor(post[0].user));
     dispatch(setIsLoadingPost(false));
     return post[0];
   });
