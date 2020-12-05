@@ -92,12 +92,10 @@ export default function LoginPage() {
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       <Wrapper>
         username:
-        {' '}
         <Input value={username} onFocus={setError} onChange={e => setUsername(e.target.value)} />
       </Wrapper>
       <Wrapper>
         password:
-        {' '}
         <Input type="password" value={password} onFocus={setError} onChange={e => setPassword(e.target.value)} />
       </Wrapper>
       <Button type="submit">登入</Button>

@@ -98,17 +98,14 @@ export default function RegisterPage() {
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       <Wrapper>
         nickname:
-        {' '}
         <Input value={nickname} onFocus={setError} onChange={e => setNickname(e.target.value)} />
       </Wrapper>
       <Wrapper>
         username:
-        {' '}
         <Input value={username} onFocus={setError} onChange={e => setUsername(e.target.value)} />
       </Wrapper>
       <Wrapper>
         password:
-        {' '}
         <Input type="password" value={password} onFocus={setError} onChange={e => setPassword(e.target.value)} />
       </Wrapper>
       <Button type="submit">註冊</Button>

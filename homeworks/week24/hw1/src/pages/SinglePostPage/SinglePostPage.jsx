@@ -166,12 +166,11 @@ export default function SinglePostPage() {
               <PostTitle>{post && post.title}</PostTitle>
               <CreateInfo>
                 <PostUser>
-Created from
+                   Created from
                   {user && user.username}
                 </PostUser>
                 <PostDate>
-              at
-                  {' '}
+                   at
                   {post && new Date(post.createdAt).toLocaleString()}
                 </PostDate>
               </CreateInfo>
