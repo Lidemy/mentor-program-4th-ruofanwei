@@ -8,6 +8,7 @@ import {
   HashRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from 'react-router-dom';
 import LoginPage from '../../pages/LoginPage';
 import RegisterPage from '../../pages/RegisterPage';
@@ -63,6 +64,7 @@ function App() {
           <Route path="/new-post">
             {user && <CreateNewPostPage />}
           </Route>
+          <Redirect to="/" />
         </Switch>
       </Router>
     </Root>
